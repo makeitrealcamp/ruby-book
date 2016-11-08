@@ -1,8 +1,8 @@
 # Primeros pasos
 
-La idea de este libro es que vayas siguiendo las instrucciones y las vayas ejecutando en tu computador. Vas a necesitar tener instalado Ruby y un editor de texto como atom, Sublime Text, o el de tu preferencia.
+La idea de este libro es que vayas siguiendo las instrucciones y las vayas ejecutando en tu computador. Vas a necesitar tener instalado Ruby y un editor de texto como [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), o el de tu preferencia.
 
-Voy a asumir que ya tienes Ruby instalado. Puedes verificar abriendo una línea de comandos y ejecutando ruby -v. Te debería aparecer una línea similar a la siguiente:
+Voy a asumir que ya tienes Ruby instalado. Puedes verificar abriendo una línea de comandos y ejecutando `ruby -v`. Te debería aparecer una línea similar a la siguiente:
 
 ```shell
 $ ruby -v
@@ -22,18 +22,20 @@ $ irb
 2.3.0 :001 >
 ```
 
-El interpretador nos permite escribir cualquier expresión válida de Ruby, oprimirnos enter, el interpretador evalúa esa expresión y aparece debajo aparece el resultado de esa expresión. Y puedes repetir ese mismo proceso las veces que quieras. Esa es una forma muy rápido de probar código. Para salir escirbe `exit`:
+El interpretador nos permite escribir cualquier expresión válida de Ruby y oprimir `Enter`. El interpretador evalúa la expresión y debajo muestra el resultado:
 
 ```shell
 $ irb
 2.3.0 :001 > 1 + 2
   => 3
-2.3.0 :002 > exit
+2.3.0 :002 >
 ```
+
+Puedes repetir ese mismo proceso las veces que quieras. Esa es una forma muy rápido de probar código. Para salir escribe `exit` y oprime `Enter`.
 
 ## Nuestro primer programa
 
-La otra forma es crear un archivo y ahí escribir nuestro código. Para eso crea una carpeta en tu máquina y úbicate sobre ella en la consola. Ábrela con tu editor preferido.
+La otra forma de ejecutar código Ruby es crear un archivo con extensión `rb` en el que escribimos nuestro código. Para eso crea una carpeta en tu máquina y úbicate sobre ella en la consola. Ábrela con tu editor preferido.
 
 Crea un archivo llamado `hello_world.rb` (los archivos de Ruby terminan con la extensión `rb` y se recomienda nombrar el archivo todo en minúscula separando las palabras con raya al piso). En el archivo escribe lo siguiente:
 
@@ -62,7 +64,7 @@ hello_world.rb:1:in `<main>`: undefined method `pts` for main:Object (NoMethodEr
 Did you mean? puts
 ```
 
-El error nos dice que ocurrión el el archivo `hello_world.rb` en la línea `1`, y que no se encuentra el método `pts`. Además nos da una sugerencia (correcta) para ver si nos estábamos refiriendo al método `puts`.
+El error nos dice que ocurrió en el archivo `hello_world.rb` en la línea `1`, y que no se encuentra el método `pts`. Además nos da una sugerencia (correcta en este caso) preguntándonos si nos estábamos refiriendo al método `puts`.
 
 Hay veces en los que es fácil encontrar los errores, otras veces no es tan fácil. Lo que si es cierto es que a medida que vayas trabajando con el lenguaje vas a ir desarrollando una intuición que te va a permitir solucionar los errores más fácilmente, pero al principio es un proceso lento que es parte de ese aprendizaje.
 
