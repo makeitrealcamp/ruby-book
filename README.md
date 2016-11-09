@@ -12,3 +12,5 @@ Nuestra recomendación es que transcribas cada bloque de código y lo pruebes en
 4. [Ciclos](3-iteraciones.md)
 5. [Arreglos](4-arreglos.md)
 6. [Más cadenas de texto](5-cadenas.md)
+7. [Hashes](6-hashes.md)
+8. [Métodos](7-funciones.md)
