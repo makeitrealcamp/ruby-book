@@ -11,3 +11,4 @@ Nuestra recomendación es que transcribas cada bloque de código y lo pruebes en
 3. [Condicionales](2-condicionales.md)
 4. [Ciclos](3-iteraciones.md)
 5. [Arreglos](4-arreglos.md)
+6. [Más cadenas de texto](5-cadenas.md)

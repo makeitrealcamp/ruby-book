@@ -94,6 +94,14 @@ array[1] = "Germán" # reemplazamos el elemento en la posición 1
 # [1, "Germán", true, false, "Juan"]
 ```
 
+En este ejemplo estamos reemplazando la posición 1 del arreglo (que realmente es la segunda porque recuerda que empieza en 0) con el valor "Germán". La línea más importante es la siguiente:
+
+```ruby
+array[1] = "Germán"
+```
+
+Como ejercicio intenta reemplazar el último elemento ("Juan") por otro valor.
+
 ## Insertando nuevos elementos
 
 Es posible insertar nuevos elementos en un arreglo (puede estar vacío o tener elementos). Por ejemplo:
@@ -104,7 +112,7 @@ array.push("Germán") # ["Pedro", "Germán"]
 array << "Diana" # ["Pedro", "Germán", "Diana"]
 ```
 
-Tanto el método `push` como el operador `<<` funcionan igual para agregar un elemento al final de la lista. ¿Qué pasa si queremos agregar un elemento en la mitad? Para eso sirve el método `insert`:
+Tanto el método `push` como el operador `<<` nos permiten agregar un elemento al final de la lista. ¿Qué pasa si queremos agregar un elemento en otra posición? Para eso sirve el método `insert`:
 
 ```ruby
 array = ["Pedro", "Germán", "Diana"]
@@ -115,7 +123,7 @@ El método `insert` recibe 2 argumentos: la posición en la que se quiere insert
 
 ## Un ejemplo
 
-Pongamos en práctica lo que hemos visto hasta ahora y creemos un programa que le permita al usuario ingresar un número de personas y seleccione una al azar. Crea un archivo llamado `choose.rb` y escribe lo siguiente:
+Pongamos en práctica lo que hemos visto hasta ahora y creemos un programa que le permita al usuario ingresar los nombres de algunas personas y seleccione una al azar. Crea un archivo llamado `choose.rb` y escribe lo siguiente:
 
 ```ruby
 print "Ingresa el número de personas que participarán: "
@@ -159,7 +167,7 @@ Puedes ver todos los métodos en la [documentación de Array](https://ruby-doc.o
 
 # Métodos con exclamación al final
 
-En la documentación vas a encontrar algunos métodos que terminan con un signo de exclamación al final como `shuffle!` y `reverse!`. Esos métodos se deben utilizar con cuidado porque modifican el arreglo original. Generalmente estos métodos tienen una versión sin signo de exclamación al final que retornan un nuevo arreglo sin modificar el original (p.e. `shuffle` y `reverse`).
+En la documentación de Ruby vas a encontrar algunos métodos que terminan con un signo de exclamación al final como `shuffle!` y `reverse!`. Esos métodos se deben utilizar con cuidado porque modifican el arreglo original. Generalmente estos métodos tienen una versión sin signo de exclamación al final que retornan un nuevo arreglo sin modificar el original (p.e. `shuffle` y `reverse`).
 
 En general intenta utilizar los métodos que **no** tienen el signo de exclamación al final a menos de que sea necesario modificar el arreglo original.
 
@@ -171,3 +179,32 @@ array = [1, 2, 3, 4, 5]
 array.shuffle! # modifica el arreglo original
 another_array = array.suffle # no modifica el arreglo original
 ```
+
+## Argumentos de un programa
+
+Hasta ahora hemos solicitado información del usuario utilizando `gets.chomp`. Sin embargo, existe otra forma en que el usuario nos puede pasar información y es a través de los argumentos del programa.
+
+Cuando ejecutamos un programa podemos pasarle varios argumentos separados por espacio. por ejemplo:
+
+```shell
+$ ruby program.rb argumento1 argumento2 argumento3
+```
+
+Podemos acceder a estos argumentos a través de una variable llamada `ARGV` (que es un arreglo). Para probarlo crea un archivo llamado `args.rb` y escribe lo siguiente:
+
+```ruby
+ARGV.each do |arg|
+  puts arg
+end
+```
+
+Si ejecutas el archivo deberías ver algo como lo siguiente:
+
+```shell
+$ ruby args.rb argumento1 argumento2 argumento3
+argumento1
+argumento2
+argumento3
+```
+
+Es simplemente otra forma en la que puedes recibir información del usuario.
