@@ -58,7 +58,7 @@ Ahora que ya sabes cómo funciona los condicionales (muchos los llamamos los ifs
 
 ```ruby
 print "Ingresa un número: "
-num = gets.chomp.to_1
+num = gets.chomp.to_i
 if num < 10
   puts "El número es menor a 10"
 end
@@ -226,6 +226,8 @@ else
   puts "No, no puedes salir"
 end
 ```
+
+La mejor opción sería:
 
 ```ruby
 print "¿Está lloviendo? (S o N): "
