@@ -102,4 +102,4 @@ Sobre las cadenas de texto podemos llamar una gran cantidad de métodos y operad
 | `empty?` | Returna true si la cadena está vacía | `"".empty? # true` |
 | `gsub` | Reemplaza las ocurrencias en el texto | `"Hola mundo".gsub("mundo", "Germán") # Hola Germán` |
 
-Puedes encontrar todos los métodos de las cadenas en la [documentación de Ruby](http://ruby-doc.org/core-2.3.1/String.html)
+Prueba cada uno de los ejemplos en IRB. Puedes encontrar todos los métodos de las cadenas en la [documentación de Ruby](http://ruby-doc.org/core-2.3.1/String.html)
