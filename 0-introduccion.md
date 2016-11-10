@@ -9,7 +9,7 @@ $ ruby -v
 ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin13]
 ```
 
-La versión puede ser diferente, cualquier versión mayor a 2.1.0 funciona.
+La versión puede ser diferente, cualquier versión mayor a 2.1.0 está bien.
 
 Si ves un mensaje diciendo que el comando no fue encontrado, significa que aún no tienes Ruby instalado. Si estás en Windows puedes seguir las instrucciones en el siguiente video:
 
@@ -58,7 +58,7 @@ Deberías ver la cadena de texto "Hola mundo" en la consola. Cambia el texto por
 
 ## Errores
 
-Veamos ahora qué pasa si cometemos algún error en nuestro código. Por ejemplo, borra el caracter `u` de la palabra `puts` y vuelve a ejecutar el archivo:
+Veamos ahora qué pasa si cometemos algún error en nuestro código. Por ejemplo, borra el caracter `u` de la palabra `puts` y vuelve a ejecutar el archivo. Te debería aparecer el siguiente mensaje de error:
 
 ```shell
 $ ruby hello_world.rb
@@ -66,11 +66,11 @@ hello_world.rb:1:in `<main>`: undefined method `pts` for main:Object (NoMethodEr
 Did you mean? puts
 ```
 
-El error nos dice que ocurrió en el archivo `hello_world.rb` en la línea `1`, y que no se encuentra el método `pts`. Además nos da una sugerencia (correcta en este caso) preguntándonos si nos estábamos refiriendo al método `puts`.
+El mensaje nos dice que el error ocurrió en el archivo `hello_world.rb` en la línea `1`, y que no se encuentra el método `pts`. Además nos da una sugerencia (correcta en este caso) preguntándonos si nos estábamos refiriendo al método `puts`.
 
 Hay veces en los que es fácil encontrar los errores, otras veces no es tan fácil. Lo que si es cierto es que a medida que vayas trabajando con el lenguaje vas a ir desarrollando una intuición que te va a permitir solucionar los errores más fácilmente, pero al principio es un proceso lento que es parte de ese aprendizaje.
 
-Vamos a ocasionar otro error, vuelve a escribir `puts` correctamente, pero ahora borra la comilla al final de esa lína y vuelve a ejecutar el archivo. Debería salir un mensaje como el siguiente:
+Cometamos otro error intencionalmente para ver un mensaje diferente. Vuelve a escribir `puts` correctamente, pero ahora borra la comilla al final de esa lína y vuelve a ejecutar el archivo. Debería salir un mensaje como el siguiente:
 
 ```shell
 $ ruby hello_world.rb
@@ -81,14 +81,14 @@ Esta vez nos dice que hay una cadena de texto que no está terminada y se encuen
 
 Vuelve a agregar la comilla y verifica que se ejecute normalmente.
 
-Ruby ejecuta el archivo línea por línea, una después de la otra. Así que podemos agregar otra segunda línea:
+Ruby ejecuta el archivo línea por línea, una después de la otra. Así que podemos agregar una segunda línea a nuestro archivo:
 
 ```ruby
 puts "Hola mundo"
 puts "Esto está muy bacano"
 ```
 
-El comando `puts` se utiliza para imprimir una cadena de texto en la consola y al final de cada cadena de texto agrega un salto de línea (un Enter). Si no quieres que agregue ese salto de línea al final utiliza `print` en vez de `puts`.
+El comando `puts` se utiliza para imprimir una cadena de texto en la consola y al final de cada cadena de texto agrega un salto de línea (un `Enter`). Si no quieres que agregue ese salto de línea al final utiliza `print` en vez de `puts`.
 
 ```ruby
 print "Hola mundo"
@@ -121,7 +121,7 @@ Hola mundo
 Esto está muy bacano
 ```
 
-No importa cuáles comillas utilices (aunque más adelante vamos a ver casos en que solo podemos utilizar las comillas dobles). Si el texto contiene comillas simples utiliza comillas dobles; si el texto contiene comillas dobles utiliza comillas sencillas:
+No importa cuáles comillas utilices (aunque más adelante vamos a ver casos en los que solo podemos utilizar las comillas dobles). Si el texto contiene comillas simples utiliza comillas dobles; si el texto contiene comillas dobles utiliza comillas sencillas:
 
 ```ruby
 puts "Hol'a mundo"
@@ -146,7 +146,7 @@ puts "puts 'hola mundo'"
 
 Fíjate que esa última línea contiene código Ruby, pero como está dentro de una cadena de texto Ruby ignora lo que está allí adentro y lo muestra tal y como lo escribimos:
 
-```shell
+```bash
 $ ruby hello_world.rb
 Hol'a mund'o
 Esto está muy "bacano"
