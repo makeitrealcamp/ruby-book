@@ -95,4 +95,94 @@ En general, los programadores de Ruby tienden a omitir el `return` a menos de qu
 
 ## Un ejemplo
 
-Vamos a crear un método que reciba un número 
+En el capítulo de [Condicionales](2-condicionales.md) hicimos un programa que nos decía de qué generación somos dependiendo de nuestro año de nacimiento. Las generaciones son las siguientes:
+
+```
+Nacidos <= 1945 - la gran generación
+Nacidos entre 1946 y 1964 - baby boomers
+Nacidos entre 1965 y 1982 - generación x
+Nacidos entre 1983 y 2004 - milenials
+Nacidos >= 2005 - centenials
+```
+
+Vamos ahora a hacer un método que nos diga la generación y lo invocamos con lo que ingrese el usuario. Crea un archivo llamado `generation_method.rb` y escribe lo siguiente:
+
+```ruby
+def generation(birth_of_year)
+  if year_of_birth >= 1996
+    puts "Eres un centenial"
+  elsif year_of_birth >= 1977
+    puts "Eres un millenial"
+  elsif year_of_birth >= 1965
+    puts "Eres generación X"
+  elsif year_of_birth >= 1946
+    puts "Eres baby boomer"
+  else
+    puts "Eres tradicionalista"
+  end
+end
+
+print "¿Cuál es tu año de nacimiento? "
+year_of_birth = gets.chomp.to_i
+generation(year_of_birth)
+```
+
+Si la ejecutas debería funcionar:
+
+```shell
+$ ruby generation_method.rb
+¿Cuál es tu año de nacimiento? 1982
+Eres un millenial
+```
+
+Sin embargo, sería mucho mejor evitar el `puts` en el método. Modifiquémoslo para mejorarlo:
+
+```ruby
+def generation(birth_of_year)
+  if year_of_birth >= 1996
+    "Eres un centenial"
+  elsif year_of_birth >= 1977
+    "Eres un millenial"
+  elsif year_of_birth >= 1965
+    "Eres generación X"
+  elsif year_of_birth >= 1946
+    "Eres baby boomer"
+  else
+    "Eres tradicionalista"
+  end
+end
+
+print "¿Cuál es tu año de nacimiento? "
+year_of_birth = gets.chomp.to_i
+
+puts generation(year_of_birth)
+```
+
+Mucho mejor. Sin embargo hay algo que no me gusta de este método. Está retornando los strings en Español. Si quisiéramos comparar ese valor para realizar alguna acción dependiendo de la generación, nos tocaría comparar el string exacto. Además, si queremos tener una aplicación que soporte varios idiomas esta implementación no va a funcionar. Podemos mejorarla:
+
+```ruby
+def generation(birth_of_year)
+  if year_of_birth >= 1996
+    :centenial
+  elsif year_of_birth >= 1977
+    :millenial
+  elsif year_of_birth >= 1965
+    :generation_x
+  elsif year_of_birth >= 1946
+    :baby_boomer
+  else
+    :traditionalist
+  end
+end
+
+translations = { centenial: "centenial", millenial: "millenial", generation_x: "X",
+  baby_boomer: "baby boomer", traditionalist: "tradicionalista" }
+
+print "¿Cuál es tu año de nacimiento? "
+year_of_birth = gets.chomp.to_i
+
+generation_code = generation(year_of_birth)
+puts "Eres de la generación #{translations[generation_code]}"
+```
+
+El programa es más largo pero la función `generation` es ahora mucho más reutilizable. Si queremos tomar una desición dependiendo de la generación lo podemos hacer fácilmente (comparar símbolos es mucho menos propenso a errores que comparar cadenas de texto).
