@@ -1,10 +1,10 @@
 # Condicionales
 
-Ya hemos visto que el código se ejecuta línea a línea, una detrás de otra. Pero a veces se hace necesario romper esa secuencia y crear ramas en nuestro código que nos permitan tomar diferentes caminos dependiendo de ciertas condiciones.
+Hasta ahora hemos visto código que se ejecuta línea a línea, una detrás de otra. Pero a veces se hace necesario romper esa secuencia y crear ramas que nos permitan tomar diferentes caminos en el código dependiendo de ciertas condiciones.
 
-Por ejemplo, imagina cómo podríamos hacer un programa que nos diga si un número es mayor o menor que diez. Si es mayor a 10 debería imprimir una cosa, pero si es menor debería imprimir otra.
+Por ejemplo, imagina cómo podríamos hacer un programa que nos diga si un número es mayor o menor a diez. Si es mayor a 10 debería imprimir una cosa, pero si es menor debería imprimir otra.
 
-A este concepto se le conoce como condicionales y la sintaxis es la siguiente:
+A este concepto se le conoce como condicionales y su sintaxis es la siguiente:
 
 ```ruby
 if <condición>
@@ -20,7 +20,7 @@ if true
 end
 ```
 
-Ejecútalo. Debería imprimir "Hola mundo" siempre, no importa cuantas veces lo ejecutes
+Ejecútalo varias veces. En todas debería imprimir "Hola mundo":
 
 ```shell
 $ ruby conditionals.rb
@@ -88,7 +88,7 @@ end
 
 Prueba el programa con un número menor a 10, otro igual a 10 y otro mayor a 10.
 
-Realmente todo lo que necesitamos para hacer condicionales es el if. Con el if ya podemos hacer cualquier tipo de condicional. Pero también existen dos atajos que se utilizan para escribir código más corto. El primero es el `else`, que significa "de lo contrario", y nos permite ejecutar algún código cuando no entra al `if`.  Podemos reescribir el código anterior de la siguiente forma:
+Realmente todo lo que necesitamos para hacer condicionales es el `if ... end`. Con el `if ... end` podemos hacer cualquier tipo de condicional. Pero existen dos atajos que se utilizan para escribir código más corto. El primero es el `else`, que significa "de lo contrario", y nos permite ejecutar algún código cuando no entra al `if`.  Podemos reescribir el código anterior de la siguiente forma:
 
 ```ruby
 print "Ingresa un número: "
@@ -100,7 +100,7 @@ else
 end
 ```
 
-Más corto pero debería funciona igual. Ahora supongamos que queremos modificar este programa para que imprima cuando el número es menor a 10, cuando el número es mayor a 10, y cuando el número es igual a 10. ¿Cómo te imaginas que podemos hacerlo?
+Más corto y debería funciona igual. Ahora supongamos que queremos modificar este programa para que imprima cuando el número es menor a 10, cuando el número es mayor a 10, y cuando el número es igual a 10. ¿Cómo te imaginas que podemos hacerlo?
 
 Una solución es anidar los ifs de la siguiente forma:
 
@@ -110,6 +110,7 @@ num = gets.chomp.to_1
 if num < 10
   puts "El número es menor a 10"
 else
+  # acá solo entra si el número es igual o mayor a 10
   if num > 10
     puts "El número es mayor a 10"
   else
@@ -118,7 +119,7 @@ else
 end
 ```
 
-Otra solución es utilizar otro atajo que nos ofrece Ruby, y es el `elsif`:
+Otra mejor solución es utilizar otro atajo que nos ofrece Ruby, el `elsif`:
 
 ```ruby
 print "Ingresa un número: "
@@ -132,9 +133,9 @@ else
 end
 ```
 
-Lo más importante de entender de este código es que el programa solo va a entrar a alguna de estas ramas. Por ningún motivo va a entrar a dos. Ruby primero evalúa la condición del `if`, y si es true, ejecuta el código y salta hasta después del `end` sin evaluar las siguientes condiciones. En cambio, si evalúa a false, sigue con la evaluación del elsif, y si es true, ejecuta el código dentro de ese elsif y salta hasta después del end.
+Lo más importante de entender de este código es que el programa solo va a entrar a **una** de estas ramas. Por ningún motivo va a entrar a dos. Ruby primero evalúa la condición del `if`, y si es true, ejecuta el código y salta hasta después del `end` sin evaluar las siguientes condiciones. En cambio, si evalúa a false, sigue con la evaluación del `elsif`, y si es `true`, ejecuta el código dentro de ese `elsif` y salta hasta después del `end`.
 
-Bien, ahora supongamos que queremos escribir un programa que le pida al usuario un número e imprima "El número está entre 10 y 20" si efectivamente está entre 10 y 20. ¿Cómo te imaginas que lo podríamos solucionar?
+Bien, ahora supongamos que queremos escribir un programa que le pida al usuario un número e imprima "El número está entre 10 y 20" si el número que ingrese el usuario está efectivamente entre 10 y 20. ¿Cómo te imaginas que lo podríamos solucionar?
 
 Una opción es usar ifs anidados, entonces:
 
@@ -147,9 +148,24 @@ if num >= 10
 end
 ```
 
-El problema es que si ahora queremos imprimir "El número no está entre 10 o 20", se nos va a dificultar. Por ejemplo, supongamos que el número es 25.
+El problema es que si ahora queremos imprimir "El número no está entre 10 o 20" cuando el número que ingrese el usuario no esté entre 10 y 20, se nos va a dificultar. 
 
-En general uno debe tratar de evitar los ifs anidados porque son más difíciles de entender. Afortunadamente Ruby nos da las herramientas para solucionar este problema (la mayoría de lenguajes lo hace igual) y es utilizar y y o en las condiciones. En este caso podemos arreglar el código anterior de la siguiente forma:
+Por ejemplo, supongamos que el número es 25. 25 es mayor a 10 así que va a entrar al primer `if`. Sin embargo, 20 **no** es menor que 20, así que no va a entrar al segundo `if`. Una solución sería repetir algo de código:
+
+```ruby
+num = 15
+if num >= 10
+  if num <= 20
+    puts "El número está entre 10 y 20"
+  else
+    puts "El número no está entre 10 y 20"
+  end
+else
+  puts "El número no está entre 10 y 20"
+end
+```
+
+Pero este código es difícil de entender. En general uno debe tratar de evitar los `ifs` anidados porque son difíciles de entender. Afortunadamente Ruby nos da las herramientas para solucionar este problema (al igual que la mayoría de lenguajes) y es utilizar `y` y `o` en las condiciones. En este caso podemos arreglar el código anterior de la siguiente forma:
 
 ```ruby
 num = 15
@@ -158,7 +174,9 @@ if num >= 10 && num <= 20
 end
 ```
 
-También existe el o. Supongamos que queremos escribir un programa que le pida un color al usuario y diga excelente elección solo si el color es rojo o negro. Podríamos hacer lo siguiente:
+El `y` se representa con `&&`. Fíjate que en cada lado del `&&` hay una expresión que evalúa a verdadero o falso. 
+
+También existe el `o`. Supongamos que queremos escribir un programa que le pida un color al usuario y diga excelente elección solo si el color es rojo **o** negro. Una solución que no requiere el `o` es la siguiente:
 
 ```ruby
 color = gets.chomp
@@ -171,7 +189,7 @@ if color == "blanco"
 end
 ```
 
-Sin embargo, acá nos estamos repitiendo, así que lo podemos mejorar con un o:
+Sin embargo, acá nos estamos repitiendo, así que lo podemos mejorar con un `o`:
 
 ```ruby
 color = gets.chomp
@@ -180,7 +198,7 @@ if color == "negro" || color == "blanco"
 end
 ```
 
-Bien, hasta acá todo bien, pero este es el punto en que se puede complicar. Supongamos ahora que le vamos a pedir un número y un color al usuario y queremos imprimir "Excelente elección" si el color es negro y el número está entre 10 y 20, o si el color es diferente a verde y el número es menor a 10.
+Mucho mejor. Pero este es el punto en que se puede complicar. Supongamos ahora que le queremos pedir un número y un color al usuario, y queremos imprimir "Excelente elección" si el color es negro y el número está entre 10 y 20, o si el color es diferente a verde y el número es menor a 10. Podemos combinar `&&` y `||` en una expresión más compleja:
 
 ```ruby
 num = gets.chomp.to_i
@@ -190,18 +208,40 @@ if (color == "negro" && (num >= 10 && num <= 20)) || (color != "verde" && num < 
 end
 ```
 
+En general es mejor evitar condicionales tan complejas. Pero si te encuentras con algo así, lo mejor es reemplazar las variables con algunos valores y empezar a simplificar la expresión de la siguiente forma:
+
 ```
 num = 15
 color = "verde"
-(false && (true && true)) || (false && false)
-(false && (    true    )) || (     false    )
-         false            ||       false
-                        false
+(false && (true && true)) || (false && false) # reemplazamos las variables y quedamos con esta expresión
+(false && (    true    )) || (     false    ) # simplificamos un nivel más
+         false            ||       false      # simplificamos lo de la izquierda
+                        false                 # false || false es false
 ```
 
-Para este tipo de problemas se han desarrollado las tablas de verdad. Veamos la tabla de verdad del `&&` y del `||`, que son las más comunes.
+Para este tipo de problemas se han desarrollado las tablas de verdad. Veamos la tabla de verdad del `&&` y del `||`, que son las más comunes. La tabla del `&&` es la siguiente:
 
-Bien, por último vamos a ver la negación. Supongamos que queremos escribir un programa que le pregunta al usuario si está lloviendo o no, y si está lloviendo, diga algo como "No, no puedes salir". De nuevo, ponle pausa al video, inténtalo y a continuación lo solucionamos.
+| Expresión | Resultado | 
+| --- | --- |
+| `true && true` | `true` | 
+| `true && false` | `false` |
+| `false && true` | `false` |
+| `false && false` | `false` |
+
+La tabla del `||` es la siguiente:
+
+| Expresión | Resultado | 
+| --- | --- |
+| `true || true` | `true` | 
+| `true || false` | `true` |
+| `false || true` | `true` |
+| `false || false` | `false` |
+
+Con mi hija practico un juego en donde le digo frases como: "Prende la luz si tu mamá está en la sala **y** hoy es viernes". Ella tiene que decidir si prende la luz o no. En este caso solo debe prender la luz si las dos condiciones se cumplen (que su mamá esté en la sala y hoy sea viernes). 
+
+En cambio, si le digo "Prende la luz si tu mamá está en la sala **o** hoy es viernes", ella debe prender la luz si cualquier condición se cumple. Por debajo debe aplicar las tablas de verdad pero es mucho más intuitivo aprenderlo así.
+
+Bien, por último vamos a ver la negación. Supongamos que queremos escribir un programa que le pregunta al usuario si está lloviendo o no, y si está lloviendo, diga algo como "No, no puedes salir".
 
 Como siempre, en programación hay muchas formas de llegar a la misma solución. Y tu primera tarea es que funcione, no importa cómo. Se me ocurren las siguientes soluciones a este problema:
 
@@ -215,6 +255,10 @@ if not_raining
 end
 ```
 
+Primero le pedimos al usuario que ingrese `S` o `N` si está lloviendo o no. Después comparamos si lo que ingresa el usuario es `N` (no está lloviendo) y lo almacenamos en la variable `not_raining`. Por último, el `if` solo entra si la variable `not_raining` es `true`.
+
+Otra solución sería:
+
 ```ruby
 print "¿Está lloviendo? (S o N): "
 input = gets.chomp
@@ -227,7 +271,7 @@ else
 end
 ```
 
-La mejor opción sería:
+Pero no es muy recomendable dejar ifs vacíos. La mejor opción sería:
 
 ```ruby
 print "¿Está lloviendo? (S o N): "
@@ -239,6 +283,8 @@ if !raining
 end
 ```
 
+Es similar a la primera, pero en vez de crear una variable `not_raining` mejor creamos una que sea `raining` que va a tener el valor de `true` si está lloviendo, `false` de lo contrario. Y en la condición del `if` utilizamos `!raning` (`!` es negación), que significa si no está lloviendo (si `raining` es `true` la condición evalúa a `false`, pero si `raining` es `false` la condición evalúa a `true`).
+
 Hagamos un programa que nos diga de qué generación somos dependiendo de nuestro año de nacimiento. Las generaciones son las siguientes:
 
 ```
@@ -249,19 +295,38 @@ Nacidos entre 1983 y 2004 - milenials
 Nacidos >= 2005 - centenials
 ```
 
-Si quieres practicar pausa el video e inténtalo por tu cuenta. Bien, veamos cómo sería ese programa:
+Bien, crea un archivo `generation.rb` y escribe lo siguiente:
 
 ```ruby
 print "¿Cuál es tu año de nacimiento? "
 year_of_birth = gets.chomp.to_i
 
-if year_of_birth >= 1996
+if year_of_birth >= 2005
   puts "Eres un centenial"
-elsif year_of_birth >= 1977
+elsif year_of_birth >= 1983
   puts "Eres un millenial"
 elsif year_of_birth >= 1965
   puts "Eres generación X"
 elsif year_of_birth >= 1946
+  puts "Eres baby boomer"
+else
+  puts "Eres tradicionalista"
+end
+```
+
+Intenta entenderlo. ¿Por qué en los `elsif` solo estamos comparando si el año es mayor o igual? ¿Por qué no es necesario comparar que el año se menor que el de la siguiente generación como en el siguiente código?
+
+```ruby
+print "¿Cuál es tu año de nacimiento? "
+year_of_birth = gets.chomp.to_i
+
+if year_of_birth >= 2005
+  puts "Eres un centenial"
+elsif year_of_birth >= 1983 && year_of_birth < 2005
+  puts "Eres un millenial"
+elsif year_of_birth >= 1965 && year_of_birth < 1983
+  puts "Eres generación X"
+elsif year_of_birth >= 1946 && year_of_birth < 1965
   puts "Eres baby boomer"
 else
   puts "Eres tradicionalista"
