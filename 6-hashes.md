@@ -79,7 +79,7 @@ Es posible mezclar arreglos y hashes para crear estructuras complejas. Para prob
 ```ruby
 products = [
   { id: 1, name: "Leche", price: 120, categories: ["familiar", "comida"] },
-  { id: 2, name: "Arroz", price: 80, ["familiar", "comida"] },
+  { id: 2, name: "Arroz", price: 80, categories: ["familiar", "comida"] },
   { id: 3, name: "Lavadora", price: 7800, categories: ["electrodomésticos"] }
 ]
 ```
@@ -89,7 +89,7 @@ En este ejemplo hemos creado un arreglo de hashes. Cada hash representa un produ
 ```ruby
 products = [
   { id: 1, name: "Leche", price: 120, categories: ["familiar", "comida"] },
-  { id: 2, name: "Arroz", price: 80, ["familiar", "comida"] },
+  { id: 2, name: "Arroz", price: 80, categories: ["familiar", "comida"] },
   { id: 3, name: "Lavadora", price: 7800, categories: ["electrodomésticos"] }
 ]
 
@@ -102,4 +102,4 @@ products.each do |product|
 end
 ```
 
-Lo primero que estamos haciendo es iterando por el arreglo de productos. Por cada uno de los productos (recuerda que esto es un hash) vamos a mostrar el nombre (la llave `:nombre`), después el identificador (la llave `:id`), el precio (la llave `:price`) y las categorías (la llave `:categories`). Como las categorías están en un arreglo debemos utilizar el método `join` para convertirlas en una cadena.
+Lo primero que estamos haciendo es iterando por el arreglo de productos. Por cada uno de los productos (recuerda que esto es un hash) vamos a mostrar el nombre (la llave `:name`), después el identificador (la llave `:id`), el precio (la llave `:price`) y las categorías (la llave `:categories`). Como las categorías están en un arreglo debemos utilizar el método `join` para convertirlas en una cadena.

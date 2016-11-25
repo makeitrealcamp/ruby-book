@@ -124,7 +124,7 @@ Esto está muy bacano
 No importa cuáles comillas utilices (aunque más adelante vamos a ver casos en los que solo podemos utilizar las comillas dobles). Si el texto contiene comillas simples utiliza comillas dobles; si el texto contiene comillas dobles utiliza comillas sencillas:
 
 ```ruby
-puts "Hol'a mundo"
+puts "Hol'a mundo'"
 puts 'Esto está muy "bacano"'
 ```
 
@@ -139,7 +139,7 @@ Esto está muy "bacano"
 Agreguemos una línea más a nuestro archivo:
 
 ```ruby
-puts "Hol'a mundo"
+puts "Hol'a mundo'"
 puts 'Esto está muy "bacano"'
 puts "puts 'hola mundo'"
 ```
@@ -159,7 +159,7 @@ Los comentarios se utilizan para documentar o aclarar nuestro código. Para agre
 
 ```ruby
 # este es un comentario
-puts "Hol'a mundo"
+puts "Hol'a mundo'"
 puts 'Esto está muy "bacano"'
 puts "puts 'hola mundo'" # este es un comentario
 ```
@@ -171,7 +171,7 @@ Agreguemos un nuevo comentario:
 ```ruby
 # este es un comentario
 # puts 'hola mundo'
-puts "Hol'a mundo"
+puts "Hol'a mundo'"
 puts 'Esto está muy "bacano"'
 puts "puts 'hola mundo'" # este es un comentario
 ```

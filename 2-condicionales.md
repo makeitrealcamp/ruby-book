@@ -100,7 +100,7 @@ else
 end
 ```
 
-Más corto y debería funciona igual. Ahora supongamos que queremos modificar este programa para que imprima cuando el número es menor a 10, cuando el número es mayor a 10, y cuando el número es igual a 10. ¿Cómo te imaginas que podemos hacerlo?
+Más corto y debería funcionar igual. Ahora supongamos que queremos modificar este programa para que imprima cuando el número es menor a 10, cuando el número es mayor a 10, y cuando el número es igual a 10. ¿Cómo te imaginas que podemos hacerlo?
 
 Una solución es anidar los ifs de la siguiente forma:
 
@@ -133,7 +133,7 @@ else
 end
 ```
 
-Lo más importante de entender de este código es que el programa solo va a entrar a **una** de estas ramas. Por ningún motivo va a entrar a dos. Ruby primero evalúa la condición del `if`, y si es true, ejecuta el código y salta hasta después del `end` sin evaluar las siguientes condiciones. En cambio, si evalúa a false, sigue con la evaluación del `elsif`, y si es `true`, ejecuta el código dentro de ese `elsif` y salta hasta después del `end`.
+Lo más importante de entender de este código es que el programa sólo va a entrar a **una** de estas ramas. Por ningún motivo va a entrar a dos. Ruby primero evalúa la condición del `if`, y si es true, ejecuta el código y salta hasta después del `end` sin evaluar las siguientes condiciones. En cambio, si evalúa a false, sigue con la evaluación del `elsif`, y si es `true`, ejecuta el código dentro de ese `elsif` y salta hasta después del `end`.
 
 Bien, ahora supongamos que queremos escribir un programa que le pida al usuario un número e imprima "El número está entre 10 y 20" si el número que ingrese el usuario está efectivamente entre 10 y 20. ¿Cómo te imaginas que lo podríamos solucionar?
 
@@ -148,7 +148,7 @@ if num >= 10
 end
 ```
 
-El problema es que si ahora queremos imprimir "El número no está entre 10 o 20" cuando el número que ingrese el usuario no esté entre 10 y 20, se nos va a dificultar. 
+El problema es que si ahora queremos imprimir "El número no está entre 10 o 20" cuando el número que ingrese el usuario no esté entre 10 y 20, se nos va a dificultar.
 
 Por ejemplo, supongamos que el número es 25. 25 es mayor a 10 así que va a entrar al primer `if`. Sin embargo, 20 **no** es menor que 20, así que no va a entrar al segundo `if`. Una solución sería repetir algo de código:
 
@@ -174,7 +174,7 @@ if num >= 10 && num <= 20
 end
 ```
 
-El `y` se representa con `&&`. Fíjate que en cada lado del `&&` hay una expresión que evalúa a verdadero o falso. 
+El `y` se representa con `&&`. Fíjate que en cada lado del `&&` hay una expresión que evalúa a verdadero o falso.
 
 También existe el `o`. Supongamos que queremos escribir un programa que le pida un color al usuario y diga excelente elección solo si el color es rojo **o** negro. Una solución que no requiere el `o` es la siguiente:
 
@@ -221,23 +221,23 @@ color = "verde"
 
 Para este tipo de problemas se han desarrollado las tablas de verdad. Veamos la tabla de verdad del `&&` y del `||`, que son las más comunes. La tabla del `&&` es la siguiente:
 
-| Expresión | Resultado | 
+| Expresión | Resultado |
 | --- | --- |
-| `true && true` | `true` | 
+| `true && true` | `true` |
 | `true && false` | `false` |
 | `false && true` | `false` |
 | `false && false` | `false` |
 
 La tabla del `||` es la siguiente:
 
-| Expresión | Resultado | 
+| Expresión | Resultado |
 | --- | --- |
-| `true || true` | `true` | 
+| `true || true` | `true` |
 | `true || false` | `true` |
 | `false || true` | `true` |
 | `false || false` | `false` |
 
-Con mi hija practico un juego en donde le digo frases como: "Prende la luz si tu mamá está en la sala **y** hoy es viernes". Ella tiene que decidir si prende la luz o no. En este caso solo debe prender la luz si las dos condiciones se cumplen (que su mamá esté en la sala y hoy sea viernes). 
+Con mi hija practico un juego en donde le digo frases como: "Prende la luz si tu mamá está en la sala **y** hoy es viernes". Ella tiene que decidir si prende la luz o no. En este caso solo debe prender la luz si las dos condiciones se cumplen (que su mamá esté en la sala y hoy sea viernes).
 
 En cambio, si le digo "Prende la luz si tu mamá está en la sala **o** hoy es viernes", ella debe prender la luz si cualquier condición se cumple. Por debajo debe aplicar las tablas de verdad pero es mucho más intuitivo aprenderlo así.
 
