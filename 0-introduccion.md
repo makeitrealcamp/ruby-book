@@ -11,9 +11,9 @@ ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin13]
 
 La versión puede ser diferente, cualquier versión mayor a 2.1.0 está bien.
 
-Si ves un mensaje diciendo que el comando no fue encontrado, significa que aún no tienes Ruby instalado. Si estás en Windows puedes seguir las instrucciones en el siguiente video:
+Si ves un mensaje diciendo que el comando no fue encontrado, significa que aún no tienes Ruby instalado. Puedes encontrar las instrucciones para instalarlo en el siguiente repositorio:
 
-* [Instalación de Ruby en Windows](https://makeitreal.wistia.com/medias/s3dvclbol2)
+* https://github.com/makeitrealcamp/ruby-installation
 
 ## IRB
 
