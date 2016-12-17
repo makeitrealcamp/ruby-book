@@ -185,4 +185,4 @@ generation_code = generation(year_of_birth)
 puts "Eres de la generación #{translations[generation_code]}"
 ```
 
-El programa es más largo pero la función `generation` es ahora mucho más reutilizable. Si queremos tomar una desición dependiendo de la generación lo podemos hacer fácilmente (comparar símbolos es mucho menos propenso a errores que comparar cadenas de texto).
+El programa es más largo pero la función `generation` es ahora mucho más reutilizable. Si queremos tomar una decisión dependiendo de la generación lo podemos hacer fácilmente (comparar símbolos es mucho menos propenso a errores que comparar cadenas de texto).
