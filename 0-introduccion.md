@@ -2,7 +2,7 @@
 
 La idea de este libro es que vayas siguiendo las instrucciones y las vayas ejecutando en tu computador. Vas a necesitar tener instalado Ruby y un editor de texto como [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), o el de tu preferencia.
 
-Voy a asumir que ya tienes Ruby instalado. Puedes verificar abriendo una línea de comandos y ejecutando `ruby -v`. Te debería aparecer una línea similar a la siguiente:
+Para verifica si tienes Ruby instalado, abre una línea de comandos y ejecuta `ruby -v`. Te debería aparecer una línea similar a la siguiente:
 
 ```shell
 $ ruby -v
@@ -70,7 +70,7 @@ El mensaje nos dice que el error ocurrió en el archivo `hello_world.rb` en la l
 
 Hay veces en los que es fácil encontrar los errores, otras veces no es tan fácil. Lo que si es cierto es que a medida que vayas trabajando con el lenguaje vas a ir desarrollando una intuición que te va a permitir solucionar los errores más fácilmente, pero al principio es un proceso lento que es parte de ese aprendizaje.
 
-Cometamos otro error intencionalmente para ver un mensaje diferente. Vuelve a escribir `puts` correctamente, pero ahora borra la comilla al final de esa lína y vuelve a ejecutar el archivo. Debería salir un mensaje como el siguiente:
+Cometamos otro error intencionalmente para ver un mensaje diferente. Vuelve a escribir `puts` correctamente, pero ahora borra la comilla al final de esa línea y vuelve a ejecutar el archivo. Debería salir un mensaje como el siguiente:
 
 ```shell
 $ ruby hello_world.rb
