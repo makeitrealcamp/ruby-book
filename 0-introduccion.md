@@ -1,8 +1,14 @@
 # Primeros pasos
 
-La idea de este libro es que vayas siguiendo las instrucciones y las vayas ejecutando en tu computador. Vas a necesitar tener instalado Ruby y un editor de texto como [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), o el de tu preferencia.
+En este capítulo vas a aprender a ejecutar código Ruby. Nuestra recomendación es que transcribas y ejecutes cada uno de los ejemplos de este libro en tu computador e intentes solucionar cada uno de los ejercicios de forma que aceleres tu aprendizaje. Recuerda que la mejor forma de aprender sobre programación es escribiendo código.
 
-Para verifica si tienes Ruby instalado, abre una línea de comandos y ejecuta `ruby -v`. Te debería aparecer una línea similar a la siguiente:
+## Requisitos
+
+Para sacar el mayor provecho de este libro necesitas saber qué es la línea de comandos (también conocida como consola, terminal o símbolo del sitema), cómo abrirla y cómo navegar por las carpetas de tu computador. Si aún no estás familiarizado con la línea de comandos te recomendamos [este post en el blog de Make it Real](http://blog.makeitreal.camp/la-linea-de-comandos/) que te brinda una introducción y te indica algunos recursos que puedes consultar si quieres más información.
+
+Para seguir los ejemplos de este libro vas a necesitar tener instalado [Ruby](https://ruby-lang.org/) y un editor de texto como [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/) o el de tu preferencia. Si no tienes un editor de preferencia nuestra recomendación es que instales [Atom](https://atom.io/).
+
+Aunque lo más probable es que aún no tengas [Ruby](https://ruby-lang.org/) instalado en tu maquina, verifica igual abriendo una línea de comandos y ejecutando `ruby -v`. Si ya lo tienes te va a aparecer una línea similar a la siguiente:
 
 ```shell
 $ ruby -v
@@ -11,9 +17,9 @@ ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin13]
 
 La versión puede ser diferente, cualquier versión mayor a 2.1.0 está bien.
 
-Si ves un mensaje diciendo que el comando no fue encontrado, significa que aún no tienes Ruby instalado. Puedes encontrar las instrucciones para instalarlo en el siguiente repositorio:
+Si ves un mensaje diciendo que el comando no fue encontrado, significa que aún no tienes Ruby instalado. Puedes encontrar las instrucciones para instalarlo en el siguiente enlace: https://github.com/makeitrealcamp/ruby-installation.
 
-* https://github.com/makeitrealcamp/ruby-installation
+Una vez que tengas instalado [Ruby](https://ruby-lang.org/) y lo hayas verificado, continúa. En las siguientes secciones vamos a ver cómo ejecutar código Ruby en el interpretador y desde un archivo.
 
 ## IRB
 
@@ -33,7 +39,7 @@ $ irb
 2.3.0 :002 >
 ```
 
-Puedes repetir ese mismo proceso las veces que quieras. Esa es una forma muy rápido de probar código. Para salir escribe `exit` y oprime `Enter`.
+Puedes repetir ese mismo proceso las veces que quieras. Esa es una forma muy rápida de probar código. Para salir escribe `exit` y oprime `Enter`.
 
 ## Nuestro primer programa
 
@@ -79,6 +85,8 @@ hello_world.rb:1: unterminated string meets end of file
 
 Esta vez nos dice que hay una cadena de texto que no está terminada y se encuentra con el final del archivo, o se alarga hasta el final del archivo.
 
+## Escribiendo más líneas
+
 Vuelve a agregar la comilla y verifica que se ejecute normalmente.
 
 Ruby ejecuta el archivo línea por línea, una después de la otra. Así que podemos agregar una segunda línea a nuestro archivo:
@@ -97,61 +105,12 @@ print "Esto está muy bacano"
 
 Si lo ejecutamos
 
-```shell
+```
 $ ruby hello_world.rb
 Hola mundoEsto está muy bacano
 ```
 
 Aparecen las dos cadenas en una misma línea. El print lo vamos a usar más adelante. Por ahora vuelve a cambiarlo por `puts`.
-
-## Comillas sencillas o dobles
-
-Ahora cambia las comillas de la segunda línea por comillas sencillas:
-
-```ruby
-puts "Hola mundo"
-puts 'Esto está muy bacano'
-```
-
-Ejecuta el archivo y fíjate que el resultado permanezca igual:
-
-```shell
-$ ruby hello_world.rb
-Hola mundo
-Esto está muy bacano
-```
-
-No importa cuáles comillas utilices (aunque más adelante vamos a ver casos en los que solo podemos utilizar las comillas dobles). Si el texto contiene comillas simples utiliza comillas dobles; si el texto contiene comillas dobles utiliza comillas sencillas:
-
-```ruby
-puts "Hol'a mundo"
-puts 'Esto está muy "bacano"'
-```
-
-Si ejecutas de nuevo el archivo deberían aparecer esas comillas dentro del texto:
-
-```shell
-$ ruby hello_world.rb
-Hol'a mund'o
-Esto está muy "bacano"
-```
-
-Agreguemos una línea más a nuestro archivo:
-
-```ruby
-puts "Hol'a mundo"
-puts 'Esto está muy "bacano"'
-puts "puts 'hola mundo'"
-```
-
-Fíjate que esa última línea contiene código Ruby, pero como está dentro de una cadena de texto Ruby ignora lo que está allí adentro y lo muestra tal y como lo escribimos:
-
-```bash
-$ ruby hello_world.rb
-Hol'a mund'o
-Esto está muy "bacano"
-puts 'hola mundo'
-```
 
 ## Comentarios
 
@@ -159,9 +118,8 @@ Los comentarios se utilizan para documentar o aclarar nuestro código. Para agre
 
 ```ruby
 # este es un comentario
-puts "Hol'a mundo"
-puts 'Esto está muy "bacano"'
-puts "puts 'hola mundo'" # este es un comentario
+puts "Hola mundo"
+puts "Esto está muy bacano" # este es otro comentario
 ```
 
 En este caso hemos agregado dos comentarios: el de la primera línea y el que está al final del último `puts`. Los comentarios son ignorados por Ruby así que deberías ver el mismo resultado que antes cuando ejecutes el archivo.
@@ -170,104 +128,22 @@ Agreguemos un nuevo comentario:
 
 ```ruby
 # este es un comentario
-# puts 'hola mundo'
-puts "Hol'a mundo"
-puts 'Esto está muy "bacano"'
-puts "puts 'hola mundo'" # este es un comentario
+# puts "Hola mundo"
+puts "Hola mundo"
+puts "Esto está muy bacano"
 ```
 
 Fíjate que en el nuevo comentario estamos escribiendo código Ruby válido, pero por estar en un comentario Ruby lo ignora completamente.
 
-## Matemáticas
 
-Crea un nuevo archivo llamado `math.rb` con el siguiente código:
+## Preguntas y ejercicios
 
-```ruby
-puts 1 + 2
-puts 3 * 4 + 5
-puts 8 / 2
-```
+1. ¿Qué es IRB?
 
-Ejecuta el archivo, deberías ver algo como lo siguiente:
+2. ¿Qué extensión tienen los archivos de Ruby?
 
-```shell
-$ ruby math.rb
-3
-17
-4
-```
+3. ¿Cómo imprimimos "Me gusta Ruby!" desde un archivo de texto?
 
-El segundo ejemplo es particularmente interesante. Ruby sigue el mismo estandar que en matemáticas, y por lo tanto la multiplicación se ejecuta primero que la suma. Puedes cambiar el comportamiento con paréntesis, cambia la operación de la segunda línea por `3 * (4 + 5)`. El resultado debería ser `27`.
+4. ¿Cómo se ejecuta un archivo de Ruby?
 
-## Interpolación
-
-Modifica el archivo con el siguiente código (le agregamos los `print` antes de cada operación):
-
-```ruby
-print "1 + 2 = "
-puts 1 + 2
-print "3 * 4 + 5 = "
-puts 3 * 4 + 5
-print "8 / 2 = "
-puts 8 / 2
-```
-
-Si ejecutas el archivo nuevamente deberías ver lo siguiente:
-
-```shell
-$ ruby math.rb
-1 + 2 = 3
-3 * 4 + 5 = 17
-8 / 2 = 4
-```
-
-Sin embargo, podemos hacer nuestro programa más corto con interpolación:
-
-```ruby
-puts "1 + 2 = #{1 + 2}"
-puts "3 * 4 + 5 = #{3 * 4 + 5}"
-puts "8 / 2 = #{8 / 2}"
-```
-
-Ejecuta el archivo, deberías ver el mismo resultado que antes.
-
-La interpolación nos permite evaluar código Ruby dentro de una cadena de texto. La sintaxis que debes utilizar es `#{}` y lo que deseas evaluar va dentro de los corchetes.
-
-**Nota:** Para utilizar interpolación es necesario utilizar comillas dobles en vez de simples.
-
-## Comparaciones
-
-Crea un nuevo archivo llamado `comparison.rb` y escribe lo siguiente:
-
-```ruby
-puts 5 > 3 # mayor que
-puts 5 >= 3 # mayor o igual que
-puts 4 < 4 # menor que
-puts 4 <= 4 # menor o igual que
-puts 2 == 2 # igual a
-puts 2 != 2 # diferente de
-```
-
-Ejecuta el archivo, deberías ver algo así:
-
-```shell
-$ ruby comparisons.rb
-true
-true
-false
-true
-true
-false
-```
-
-Cómo ejercicio, agrégales un texto como lo hicimos con las operaciones matemáticas utilizando interpolación para que aparezca así:
-
-```shell
-$ ruby comparisons.rb
-5 > 3 es true
-5 >= 3 es true
-4 < 4 es false
-4 <= 4 es true
-2 == 2 es true
-2 != 2 es false
-```
+5. ¿Qué caracter se utiliza para agregar comentarios en Ruby?
