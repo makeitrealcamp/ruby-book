@@ -20,9 +20,9 @@ if true
 end
 ```
 
-Ejecútalo varias veces. En todas debería imprimir "Hola mundo":
+Ejecútalo varias veces. En todas debería imprimir `"Hola mundo"`:
 
-```shell
+```
 $ ruby conditionals.rb
 Hola mundo
 ```
@@ -35,7 +35,7 @@ if false
 end
 ```
 
-Ejecútalo. Esta vez **nunca** debería imprimir "Hola mundo", no importa cuantas veces lo ejecutes.
+Ejecútalo. Esta vez **nunca** debería imprimir `"Hola mundo"`, no importa cuantas veces lo ejecutes.
 
 También podemos utilizar algo que evalúe a verdadero o falso en la condición. Por ejemplo:
 
@@ -67,7 +67,7 @@ end
 
 Si lo ejecutas e ingresas un número menor a 10 te debería salir lo siguiente:
 
-```shell
+```
 $ ruby number.rb
 Ingresa un número: 5
 El número es menor a 10
@@ -148,7 +148,7 @@ Prúebalo con un número menor a 10, otro mayor a 10 y con 10. Te debería mostr
 
 ## De lo contrario, si (else if)
 
-En general, es preferible no tener que anidar condicionales porque son difíciles de leer y entender. Otro atajo que nos ofrece Ruby para los condicionales es el `else if`, que significa "De lo contrario, si ..." en Inglés. La sintaxis es la siguiente:
+En general, es preferible no tener que anidar condicionales porque son difíciles de leer y entender. Otro atajo que nos ofrece Ruby para los condicionales es el `elsif`, que significa "De lo contrario, si ..." en Inglés. La sintaxis es la siguiente:
 
 
 ```ruby
@@ -182,7 +182,7 @@ end
 
 Lo más importante de entender en este código es que el programa sólo va a entrar a **una** de estas ramas. Por ningún motivo va a entrar a dos de ellas. Si la condición del primer `if` se cumple, el programa ejecuta el código que esté en ese bloque y después **salta** hasta después del `else` para continuar con el resto del programa o terminar.
 
-Si la condición del primer `if` no se cumple, pero la del `else if` sí se cumple, el programa ejecuta el código de ese bloque y **salta** hasta después del `else` para continuar con el resto del programa o terminar.
+Si la condición del primer `if` no se cumple, pero la del `elsif` sí se cumple, el programa ejecuta el código de ese bloque y **salta** hasta después del `else` para continuar con el resto del programa o terminar.
 
 ## Condiciones compuestas
 
@@ -263,7 +263,7 @@ El primer paso es reemplazar cada lado de la expresión. `1 < 1` es `false` y `2
 
 `false && true`
 
-Recuerda que para que una expresión con **y** (`&&`) sea verdadera, cada lado **tiene** que ser verdadero. Sin embargo, podemos hacer una tabla con todas las combinaciones entre verdadero y falso para poderla usar como referencia más adelante:
+Recuerda que para que una expresión con **y** (`&&`) sea verdadera, cada lado **tiene** que ser verdadero. Sin embargo, podemos hacer una tabla con todas las combinaciones entre verdadero y falso para poder usarla como referencia más adelante:
 
 | Expresión | Resultado |
 | --- | --- |
@@ -349,3 +349,41 @@ Inténtalo tu. Decide si las siguientes expresiones evalúan a `true` o `false`:
 * `!(5 === 5) && 8 !== 8`
 * `("gut" === "ikk" && 26 > 30) || ("gut" === "gut" && 26 > 10)`
 * `!("testing" == "testing" && !(5 > 8))`
+
+## Evalúate
+
+1. ¿Cuál es la syntaxis de un `if` (sin `else` o `elsif`)?
+
+2. ¿Cuándo se ejecuta el código que está dentro del `if`?
+
+3. ¿Cuando se ejecuta el código que está dentro del `else`?
+
+4. ¿Cuántos `else` pueden existir en un condicional?
+
+5. ¿Cuántos `elsif` pueden existir en un condicional?
+
+6. ¿Qué problema tiene el siguiente código?
+
+   ```rb
+   if num >= 10 && <= 20
+     puts "El número está entre 10 y 20"
+   end
+   ```
+
+7. ¿Cuál es el resultado de evaluar `!(1 == 1)`?
+
+8. ¿Cuál es el resultado de evaluar `3 != 4 && !("pedro" === "juan" || 26 > 10)`?
+
+9. ¿Qué imprimiría el siguiente código?
+
+   ```
+   raza = "Persa"
+   ojos = "verdes"
+   edad = 3
+
+   if ojos == "rojos" || (edad >= 2 && edad <= 5)
+     puts "Me lo llevo!"
+   else
+     puts "Paso!"
+   end
+   ```

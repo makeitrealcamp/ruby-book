@@ -1,6 +1,6 @@
 # Tipos y Operadores
 
-En este capítulo vamos a hablar sobre cadenas de texto, números y booleanos (verdadero o falso), que son algunos tipos de datos en Ruby, y cómo realizar algunas operaciones básicas con ellos.
+En este capítulo vamos a hablar sobre cadenas de texto, números y booleanos (verdadero o falso), que son algunos de los tipos de datos en Ruby, y cómo realizar operaciones básicas con ellos.
 
 ## Cadenas de texto
 
@@ -23,18 +23,18 @@ Aunque parece fácil, existen tres errores comunes que cometen los principiantes
    ```
    "Hola mundo'
    ```
-3. Insertar el mismo tipo de comillas dentro de la cadena de texto. Por ejemplo:
+3. Insertar el mismo tipo de comillas que se usó para definir la cadena dentro del texto. Por ejemplo:
 
    ```
-   "Y él dijo: "Hola Mundo""
-   'Hol'a mundo'
+   "Y con las palabras "Hola Mundo" creó Ruby"
+   'Vamos pa' lante'
    ```
 
-Para solucionar el último error (punto 3) podemos encerrar la primera cadena entre comillas simples y la segunda entre comillas dobles para que funcione:
+Si necesitas insertar una comilla en el texto, utiliza un tipo de comilla diferente para definir la cadena. Por ejemplo, los ejemplos del último punto los podemos solucionar de la siguiente forma.
 
 ```rb
-"Hol'a mundo"
-'Y él dijo: "Hola mundo"'
+'Y con las palabras "Hola Mundo" creó Ruby'
+"Vamos pa' lante"
 ```
 
 **Recuerda:** Lo importante es que el texto no contenga la comilla que se utilizó para definir la cadena.
@@ -42,16 +42,16 @@ Para solucionar el último error (punto 3) podemos encerrar la primera cadena en
 Pero ¿qué pasa si tenemos un texto con comillas simples y dobles? En ese caso tendríamos que utilizar el caracter de escape `\` como en el siguiente ejemplo:
 
 ```rb
-'Y \'él dijo\': "Hola mundo"'
+'Y con las palabras "vamos pa\' lante" creó Ruby'
 ```
 
 O
 
 ```rb
-"Y 'él dijo': \"Hola mundo\""
+"Y con las palabras \"vamos pa' lante\" creó Ruby"
 ```
 
-En el primer ejemplo escapamos con `\` las comillas simples porque con esas fue que encerramos el texto, mientras que en el segundo ejemplo escapamos las comillas dobles porque con esas fue que encerramos el texto.
+En el primer ejemplo escapamos con `\` la comilla simple porque con esas fue que encerramos el texto, mientras que en el segundo ejemplo escapamos las comillas dobles porque con esas fue que encerramos el texto.
 
 ## Números
 
@@ -130,17 +130,17 @@ A los operadores `<`, `>`, `<=`, `>=`, `==`, `!=` se les llama **operadores lóg
 
 ## Imprimiendo en la línea de comandos
 
-Para imprimir una cadena de texto en la línea de comandos (o en la consola del navegador) utilizamos la palabra `puts` como hicimos en el capítulo anterior:
+Para imprimir un valor en la línea de comandos utilizamos la palabra `puts` como hicimos en el capítulo anterior:
 
 ```rb
-puts 'Y \'él dijo\': "Hola mundo"'
+puts "Y con las palabras \"vamos pa' lante\" creó Ruby"
 ```
 
 Si guardas esa línea en un archivo llamado `strings.rb` y lo ejecutas, el resultado debería ser el siguiente:
 
 ```
 $ ruby strings.rb
-Y 'él dijo': "Hola mundo"
+Y con las palabras "vamos pa' lante" creó Ruby
 ```
 
 ## Concatenando cadenas
@@ -167,7 +167,9 @@ $ irb
  => "Hola Mundo Cómo Estás"
 ```
 
-Si intentas concatenar una cadena con un número vas a recibir un error:
+### Concatenando valores de diferentes tipos
+
+Si intentas concatenar una cadena con un número vas a ver el siguiente error:
 
 ```
 $ irb
@@ -178,7 +180,7 @@ TypeError: no implicit conversion of Fixnum into String
 	from /Users/germanescobar/.rvm/rubies/ruby-2.3.0/bin/irb:11:in `<main>'
 ```
 
-El error nos dice que no es posible convertir un `Fixnum` (un número) a `String` (a una cadena de texto). Una solución a este problema es convertir explícitamente el número a una cadena añadiendo `.to_s` al número:
+El error nos dice que no es posible convertir un `Fixnum` (un número) a un `String` (a una cadena de texto). Una solución a este problema es convertir explícitamente el número a una cadena añadiendo `.to_s` a la derecha del número:
 
 ```
 $ irb
@@ -186,7 +188,7 @@ $ irb
  => "Hola3"
 ```
 
-Pero ahora mira este ejemplo. Queremos que imprima `"2 + 3 es 5"`:
+Ahora intenta lo siguiente, queremos que imprima `"2 + 3 es 5"`:
 
 ```
 $ irb
@@ -207,7 +209,7 @@ $ irb
 
 No es el resultado que esperábamos. Lo que hizo Ruby fue concatenar la cadena `"2 + 3 es "` con las cadenas `"2"` y `"3"`.
 
-Una solución es envolver la suma en paréntesis y agregarle `.to_s`:
+Una solución es envolver la suma entre paréntesis y agregarle `.to_s`:
 
 ```
 $ irb
@@ -227,7 +229,7 @@ $ irb
  => "Hola 4"
 ```
 
-La interpolación nos permite ejecutar código Ruby dentro de una cadena de texto y convertir el resultado automáticamente a cadena de texto:
+La interpolación nos permite ejecutar código Ruby dentro de una cadena de texto, convertir el resultado a una cadena de texto y reemplazarlo en donde se definió. Por ejemplo:
 
 ```
 $ irb
@@ -237,7 +239,7 @@ $ irb
 
 Para usar interpolación ten en cuenta lo siguiente:
 
-* Debes usar comillas dobles (`"`), comillas sencillas (`'`) no funcionan. Inténtalo:
+* Debes usar comillas dobles (`"`) en vez de sencillas (`'`). Si utilizas comillas sencillas Ruby ignora la interpolación:
 
   ```
   $ irb
@@ -245,12 +247,12 @@ Para usar interpolación ten en cuenta lo siguiente:
    => "2 + 3 es #{2 + 3}"
   ```
 
-* La sintaxis de interpolación es `#{}`. Ruby evalúa lo que esté entre los corchetes y lo convierte en una cadena de texto.
+* La sintaxis de la interpolación es `#{}`. Ruby evalúa lo que esté entre los corchetes y los convierte en cadena de texto.
 * Puedes usar `#{}` las veces que quieras dentro de una cadena.
 
 ## Evalúate
 
-1. ¿Cuál es el problema con la siguiente cadena de texto y de qué formas se podría solucionar?:
+1. ¿Cuál es el problema con la siguiente cadena de texto y de qué formas lo podríamos solucionar?
 
    ```
    "Palabras: "Agua", "Tierra""
@@ -262,7 +264,7 @@ Para usar interpolación ten en cuenta lo siguiente:
    3 + "3"
    ```
 
-3. ¿Cuál es el problema del siguiente código y cómo lo podemos solucionar para que evalúe a `true`?
+3. ¿Qué problema tiene el siguiente código y cómo lo podemos solucionar para que evalúe a `true`?
 
    ```
    3 = 3

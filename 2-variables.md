@@ -16,11 +16,19 @@ $ ruby variables.rb
 Hola Germán
 ```
 
-En este ejemplo estamos definiendo una variable con nombre `name` y le asignamos el valor "Germán" (o el valor que le hayas asignado). En la siguiente línea estamos utilizando interpolación para mostrar la cadena de texto "Hola " seguido del valor que tenga en ese momento la variable `name`.
+En este ejemplo estamos definiendo una variable con nombre `name` y le asignamos el valor `"Germán"` (o el valor que le hayas asignado). En la siguiente línea estamos utilizando interpolación para mostrar la cadena de texto `"Hola "` seguido del valor que tenga en ese momento la variable `name`.
 
-Si no interpolamos la variable simplemente veríamos "Hola name" en la pantalla.
+El nombre de una variable debe comenzar con `$`, `_` o una letra, y después puede contener letras, dígitos, `_` y `$`. Ejemplos de nombres válidos de variables incluyen `name`, `$element` y `_trains`.
 
-Bien, crea ahora un archivo llamado `square.rb` y agrega el siguiente código:
+Por otro lado, ejemplos de nombres no válidos incluyen `443german`, porque no puede empezar con un número, y `element&123`, porque el caracter `&` no es válido en el nombre.
+
+Las [palabras reservadas de Ruby](http://www.studytonight.com/ruby/reserved-keywords-in-ruby) no se pueden usar como nombres de variables.
+
+Como buena práctica se recomienda empezar las variables con una letra en minúscula y, si el nombre se compone de varias palabras, separarlas con raya al piso (`_`). Por ejemplo `video_transcoder` o `first_name`.
+
+## La utilidad de las variables
+
+Crea ahora un archivo llamado `square.rb` y agrega el siguiente código:
 
 ```ruby
 puts "El perímetro de un cuadrado de lado 5 es #{5 * 4}"
@@ -29,7 +37,7 @@ puts "El área de un cuadrado de lado 5 es #{5 * 5}"
 
 Si lo ejecutamos te debería aparecer lo siguiente:
 
-```shell
+```
 $ ruby square.rb
 El perímetro de un cuadrado de lado 5 es 20
 El área de un cuadrado de lado 5 es 25
@@ -104,3 +112,26 @@ Ingresa la longitud del lado del cuadrado: 5
 El perímetro de un cuadrado de lado 5 es 20
 El área de un cuadrado de lado 5 es 25
 ```
+
+## Evalúate
+
+1. El siguiente código no está imprimiendo el texto esperado, que debería ser `"Hola Germán"`. ¿Cuál es el problema y cómo lo podrías solucionar?
+
+   ```rb
+   name = "Germán"
+	 puts "Hola name"
+	 ```
+
+2. ¿Cuál es la utilidad de las variables?
+
+3. ¿Cuál es la diferencia entre igual (`=`) y doble igual (`==`).
+
+4. ¿Cuál es el problema con el siguiente código?
+
+   ```rb
+   5park = "Parque 5"
+	 ```
+
+5. ¿Cómo podemos pedirle información al usuario desde un programa de Ruby?
+
+6. ¿Cómo podemos pedirle información al usuario desde un programa de Ruby y convertirlo en número?

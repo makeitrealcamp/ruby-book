@@ -4,13 +4,13 @@ En este capítulo vas a aprender a ejecutar código Ruby. Nuestra recomendación
 
 ## Requisitos
 
-Para sacar el mayor provecho de este libro necesitas saber qué es la línea de comandos (también conocida como consola, terminal o símbolo del sitema), cómo abrirla y cómo navegar por las carpetas de tu computador. Si aún no estás familiarizado con la línea de comandos te recomendamos [este post en el blog de Make it Real](http://blog.makeitreal.camp/la-linea-de-comandos/) que te brinda una introducción y te indica algunos recursos que puedes consultar si quieres más información.
+Para sacar el mayor provecho de este libro necesitas saber qué es la línea de comandos, también conocida como consola, terminal o símbolo del sitema. Debes saber al menos cómo abrirla y qué comandos utilizar para listar archivos y navegar por las carpetas del sistema. Si aún no estás familiarizado con la línea de comandos te recomendamos [este post en el blog de Make it Real](http://blog.makeitreal.camp/la-linea-de-comandos/) que te brinda una introducción y te indica algunos recursos que puedes consultar con más información.
 
-Para seguir los ejemplos de este libro vas a necesitar tener instalado [Ruby](https://ruby-lang.org/) y un editor de texto como [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/) o el de tu preferencia. Si no tienes un editor de preferencia nuestra recomendación es que instales [Atom](https://atom.io/).
+Para seguir los ejemplos de este libro vas a necesitar tener instalado [Ruby](https://ruby-lang.org/) y un editor de texto como [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/) o el de tu preferencia. Si no tienes un editor de preferencia nuestra recomendación es que instales y utilices [Atom](https://atom.io/).
 
 Aunque lo más probable es que aún no tengas [Ruby](https://ruby-lang.org/) instalado en tu maquina, verifica igual abriendo una línea de comandos y ejecutando `ruby -v`. Si ya lo tienes te va a aparecer una línea similar a la siguiente:
 
-```shell
+```
 $ ruby -v
 ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-darwin13]
 ```
@@ -25,14 +25,14 @@ Una vez que tengas instalado [Ruby](https://ruby-lang.org/) y lo hayas verificad
 
 Existen dos formas de ejecutar código Ruby. La primera es abrir el interpretador de Ruby ejecutando el comando IRB.
 
-```shell
+```
 $ irb
 2.3.0 :001 >
 ```
 
 El interpretador nos permite escribir cualquier expresión válida de Ruby y oprimir `Enter`. El interpretador evalúa la expresión y debajo muestra el resultado:
 
-```shell
+```
 $ irb
 2.3.0 :001 > 1 + 2
   => 3
@@ -150,7 +150,7 @@ Fíjate que en el nuevo comentario estamos escribiendo código Ruby válido, per
 
 ## Evalúate
 
-Al final de cada capítulo encontrarás algunas preguntas sobre los conceptos vistos. No te preocupes si tienes que repasarlo para encontrar las respuestas. Lo que sí te recomendamos es que escribas las respuestas en alguna parte (no importa si es en papel o digitalmente) para que afiances los conceptos.
+Al final de cada capítulo encontrarás algunas preguntas sobre los conceptos más importantes. No te preocupes si tienes que repasar el capítulo para encontrar las respuestas. Lo que sí te recomendamos es que escribas las respuestas en alguna parte (no importa si es en papel o digitalmente) para que afiances los conceptos.
 
 1. ¿Qué es IRB?
 
