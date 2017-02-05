@@ -64,9 +64,15 @@ Deberías ver la cadena de texto "Hola mundo" en la consola. Cambia el texto por
 
 ## Errores
 
-Veamos ahora qué pasa si cometemos algún error en nuestro código. Por ejemplo, borra el caracter `u` de la palabra `puts` y vuelve a ejecutar el archivo. Te debería aparecer el siguiente mensaje de error:
+Veamos ahora qué pasa si cometemos algún error en nuestro código. Por ejemplo, borra el caracter `u` de la palabra `puts`:
 
-```shell
+```
+pts "Hola Mundo"
+```
+
+Vuelve a ejecutar el archivo con `ruby hello_world.rb`. Te debería aparecer el siguiente mensaje de error:
+
+```
 $ ruby hello_world.rb
 hello_world.rb:1:in `<main>`: undefined method `pts` for main:Object (NoMethodError)
 Did you mean? puts
@@ -74,11 +80,17 @@ Did you mean? puts
 
 El mensaje nos dice que el error ocurrió en el archivo `hello_world.rb` en la línea `1`, y que no se encuentra el método `pts`. Además nos da una sugerencia (correcta en este caso) preguntándonos si nos estábamos refiriendo al método `puts`.
 
-Hay veces en los que es fácil encontrar los errores, otras veces no es tan fácil. Lo que si es cierto es que a medida que vayas trabajando con el lenguaje vas a ir desarrollando una intuición que te va a permitir solucionar los errores más fácilmente, pero al principio es un proceso lento que es parte de ese aprendizaje.
+Hay veces que es fácil encontrar los errores, otras veces no es tan fácil. Lo que si es cierto es que a medida que vayas trabajando con el lenguaje vas a ir desarrollando una intuición que te va a permitir solucionar los errores más fácilmente, pero al principio es un proceso lento que es parte de ese aprendizaje.
 
-Cometamos otro error intencionalmente para ver un mensaje diferente. Vuelve a escribir `puts` correctamente, pero ahora borra la comilla al final de esa línea y vuelve a ejecutar el archivo. Debería salir un mensaje como el siguiente:
+Cometamos otro error intencionalmente para ver un mensaje diferente. Vuelve a escribir `puts` correctamente, pero ahora borra la comilla al final de esa línea:
 
-```shell
+```
+puts "Hola Mundo
+```
+
+Vuelve a ejecutar el archivo. Debería salir un mensaje como el siguiente:
+
+```
 $ ruby hello_world.rb
 hello_world.rb:1: unterminated string meets end of file
 ```
@@ -136,7 +148,9 @@ puts "Esto está muy bacano"
 Fíjate que en el nuevo comentario estamos escribiendo código Ruby válido, pero por estar en un comentario Ruby lo ignora completamente.
 
 
-## Preguntas y ejercicios
+## Evalúate
+
+Al final de cada capítulo encontrarás algunas preguntas sobre los conceptos vistos. No te preocupes si tienes que repasarlo para encontrar las respuestas. Lo que sí te recomendamos es que escribas las respuestas en alguna parte (no importa si es en papel o digitalmente) para que afiances los conceptos.
 
 1. ¿Qué es IRB?
 

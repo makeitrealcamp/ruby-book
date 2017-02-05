@@ -13,4 +13,4 @@ Esperamos que este libro te sea útil y te ayude a dar los primeros pasos en est
 <br>
 Germán Escobar<br>
 Fundador y CEO<br>
-makeitreal.camp
+[makeitreal.camp](http://makeitreal.camp/)

@@ -248,7 +248,7 @@ Para usar interpolación ten en cuenta lo siguiente:
 * La sintaxis de interpolación es `#{}`. Ruby evalúa lo que esté entre los corchetes y lo convierte en una cadena de texto.
 * Puedes usar `#{}` las veces que quieras dentro de una cadena.
 
-## Preguntas y Ejercicios
+## Evalúate
 
 1. ¿Cuál es el problema con la siguiente cadena de texto y de qué formas se podría solucionar?:
 
