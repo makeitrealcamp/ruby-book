@@ -376,12 +376,12 @@ Inténtalo tu. Decide si las siguientes expresiones evalúan a `true` o `false`:
 
 9. ¿Qué imprimiría el siguiente código?
 
-   ```
+   ```rb
    raza = "Persa"
    ojos = "verdes"
    edad = 3
 
-   if ojos == "rojos" || (edad >= 2 && edad <= 5)
+   if ojos == "rojos" || (edad > 2 || edad < 5)
      puts "Me lo llevo!"
    else
      puts "Paso!"
