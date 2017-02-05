@@ -1,6 +1,6 @@
 # Iteraciones o ciclos
 
-Los ciclos nos permiten repetir la ejecución de un código varias veces. Imagina que quisiéramos repetir la frase "Hola mundo" 5 veces. Podríamos hacerlo manualmente. Crea un archivo llamado `loops.rb` y escribe los siguiente:
+Los ciclos nos permiten repetir la ejecución de un código varias veces. Imagina que quisiéramos repetir la frase "Hola mundo" 5 veces. Podríamos hacerlo manualmente. Crea un archivo llamado `loops.rb` y escribe el siguiente código:
 
 ```ruby
 puts "Hola mundo"
@@ -12,7 +12,7 @@ puts "Hola mundo"
 
 Ejecútalo y deberías ver la frase "Hola mundo" 5 veces en tu pantalla:
 
-```shell
+```
 $ ruby loops.rb
 Hola mundo
 Hola mundo
@@ -31,9 +31,9 @@ while i < 850
 end
 ```
 
-Ejecútalo y revisa que la frase "Hola mundo" aparezca 850 veces. Como ejercicio modifícalo para que aparezca el valor de `i` antes de cada frase. Debería salir algo así (omitimos algunas líneas para no gastar tanto ... ehhh ... espacio):
+Ejecútalo y revisa que la frase "Hola mundo" aparezca 850 veces. Como ejercicio modifícalo para que aparezca el valor de `i` antes de cada frase. Debería salir algo así (omitimos algunas líneas para no gastar tanto pap...ehhh...espacio en disco):
 
-```shell
+```
 $ ruby loops.rb
 0 Hola mundo
 1 Hola mundo
@@ -48,7 +48,7 @@ Un ciclo tiene la siguiente sintaxis:
 
 ```ruby
 while <condición>
-  # acá va el código que se va a repetir mientas la condición sea verdadera
+  # acá va el código que se va a repetir mientras la condición sea verdadera
 end
 ```
 
@@ -99,7 +99,7 @@ end
 
 Si lo ejecutas debería preguntarte una y otra vez siempre y cuando el número sea menor a 10:
 
-```shell
+```
 $ ruby input_loop.rb
 Ingresa un número: 5
 El número es menor a 10
@@ -149,7 +149,7 @@ end
 
 Al ejecutar este código deberías ver lo siguiente:
 
-```shell
+```
 $ ruby range_loop.rb
 10 Hola mundo
 11 Hola mundo
@@ -161,11 +161,11 @@ $ ruby range_loop.rb
 
 Existen más formas de iterar en Ruby (Ruby es un lenguaje muy expresivo) pero estas son suficientes para que empieces a practicar.
 
-## Ejercicio
+## Evalúate
 
 Intenta hacer un juego que genere un número aleatorio del 1 al 10 y le pida al usuario que lo adivine con intentos ilimitados (el programa acaba únicamente cuando lo ha adivinado). Al ejecutarlo debería funcionar de la siguiente forma:
 
-```shell
+```
 $ ruby guess_num.rb
 Adivina el número del 1 al 10 que estoy pensando: 5
 ¡No! Intenta nuevamente: 3

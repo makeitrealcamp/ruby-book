@@ -58,7 +58,7 @@ El método `chars` retorna un arreglo con todos los caracteres de la cadena, y d
 
 No siempre queremos crear un arreglo a partir de sus caracteres. En ocasiones es útil dividir una cadena por otro caracter como espacio o coma. Para eso podemos utilizar el método `split`. Abre IRB y ejecuta lo siguiente:
 
-```shell
+```
 $ irb
 2.3.1 :001 > "Hola mundo".split(" ")
  => ["Hola", "mundo"]
@@ -66,15 +66,15 @@ $ irb
 
 El método `split` recibe el caracter por el que quieres partir la cadena. Por ejemplo, podemos partir una cadena por comas:
 
-```shell
+```
 $ irb
-2.3.1 :001 > "prueba,separar,cadenas".split(" ")
+2.3.1 :001 > "prueba,separar,cadenas".split(",")
  => ["prueba", "separar", "cadenas"]
 ```
 
 Si quieres unir un arreglo en una cadena puedes utilizar el método `join`:
 
-```shell
+```
 $ irb
 2.3.1 :001 > ["Hola", "mundo"].join(" ")
  => "Hola mundo"
@@ -82,7 +82,7 @@ $ irb
 
 El método `join` recibe un argumento que es el caracter que se va a utilizar para separar los elementos. Por ejemplo, podemos unir un arreglo con guiones:
 
-```shell
+```
 $ irb
 2.3.1 :001 > ["Hola", "mundo"].join("-")
  => "Hola-mundo"

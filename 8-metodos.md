@@ -12,7 +12,7 @@ end
 
 Para definir un método usamos la palabra reservada `def` y le damos un nombre (en este caso hello). Al final debemos cerrar el método con `end`.
 
-```shell
+```
 $ ruby methods.rb
 ```
 
@@ -28,7 +28,7 @@ hello() # acá lo invocamos, los paréntesis son opcionales
 
 En la última línea lo estamos invocando. Si lo ejecutas ahora si debería aparecer "Hola mundo":
 
-```shell
+```
 $ ruby methods.rb
 Hola mundo
 ```
@@ -48,7 +48,7 @@ hello("David")
 
 Si lo ejecutamos deberías ver lo siguiente:
 
-```shell
+```
 $ ruby methods.rb
 Hola Germán
 Hola David
@@ -72,7 +72,7 @@ puts hello "David"  # los paréntesis son opcionales
 Fíjate que ya no hacemos el `puts` dentro de la función, así que nos toca hacerlo al invocar el método. Pero es mejor práctica así. El problema es que cuando el `puts` está dentro de la función, esa función solo nos serviría en aplicaciones de consola. Si la queremos usar en una aplicación Web no serviría (el puts es únicamente para imprimir en la consola).
 
 
-```shell
+```
 $ ruby methods.rb
 Hola Germán
 Hola David
@@ -95,7 +95,7 @@ En general, los programadores de Ruby tienden a omitir el `return` a menos de qu
 
 ## Un ejemplo
 
-En el capítulo de [Condicionales](2-condicionales.md) hicimos un programa que nos decía de qué generación somos dependiendo de nuestro año de nacimiento. Las generaciones son las siguientes:
+En el capítulo de [Condicionales](3-condicionales.md) hicimos un programa que nos decía de qué generación somos dependiendo de nuestro año de nacimiento. Las generaciones son las siguientes:
 
 ```
 Nacidos <= 1945 - la gran generación

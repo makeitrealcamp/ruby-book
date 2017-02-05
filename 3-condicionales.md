@@ -354,9 +354,9 @@ Inténtalo tu. Decide si las siguientes expresiones evalúan a `true` o `false`:
 
 1. ¿Cuál es la syntaxis de un `if` (sin `else` o `elsif`)?
 
-2. ¿Cuándo se ejecuta el código que está dentro del `if`?
+2. ¿En qué caso se ejecuta el código que está dentro del `if`?
 
-3. ¿Cuando se ejecuta el código que está dentro del `else`?
+3. ¿En qué caso se ejecuta el código que está dentro del `else`?
 
 4. ¿Cuántos `else` pueden existir en un condicional?
 
@@ -381,7 +381,7 @@ Inténtalo tu. Decide si las siguientes expresiones evalúan a `true` o `false`:
    ojos = "verdes"
    edad = 3
 
-   if ojos == "rojos" || (edad > 2 || edad < 5)
+   if ojos == "rojos" || (edad > 2 && edad < 5)
      puts "Me lo llevo!"
    else
      puts "Paso!"

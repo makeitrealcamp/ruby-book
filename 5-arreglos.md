@@ -1,51 +1,38 @@
 # Arreglos
 
-Hasta ahora hemos trabajado con cadenas de texto, números y true/false. En este capítulo vamos a hablar de un nuevo tipo de datos: los arreglos.
+Hasta ahora hemos trabajado con cadenas de texto, números y booleanos. En este capítulo vamos a hablar de un nuevo tipo de datos: los arreglos.
 
-Un arreglo es una lista ordenada de elementos de cualquier tipo. Para crear tu primer arreglo crea un archivo llamado `arrays.rb` y escribe lo siguiente:
+Un arreglo es una lista ordenada de elementos de cualquier tipo. Para crear tu primer arreglo abre IRB y escribe lo siguiente:
 
 ```ruby
 array = [1, "Pedro", true, false, "Juan"]
 ```
 
-La sintaxis de un arreglo es muy simple. Los elementos del arreglo se envuelven entre corchetes y se separan con coma. Fíjate que el arreglo que creamos contiene números, cadenas de texto, `true` y `false`. Cada elemento del arreglo puede ser de cualquier tipo (incluso otros arreglos!).
+La sintaxis de un arreglo es muy simple. Los elementos del arreglo se envuelven entre corchetes y se separan con coma. Fíjate que el arreglo que creamos contiene números, cadenas de texto y booleanos. Cada elemento del arreglo puede ser de cualquier tipo (incluso otros arreglos!).
 
 ## Obteniendo elementos del arreglo
 
-Ahora modifiquemos el programa para que imprima el primer elemento del arreglo:
+Para obtener la primera posición del arreglo que acabamos de crear utilizas `array[0]`:
 
-```ruby
-array = [1, "Pedro", true, false, "Juan"]
-puts array[0]
+```
+$ irb
+> array = [1, "Pedro", true, false, "Juan"]
+ => [1, "Pedro", true, false, "Juan"]
+> array[0]
+ => 1
 ```
 
-Ejecútalo:
+La sintaxis para obtener un elemento del arreglo es `[n]` donde `n` es la posición empezando en 0. Imprime ls demás elementos del arreglo:
 
-```shell
-$ ruby arrays.rb
-1
 ```
-
-La sintaxis para obtener un elemento del arreglo es `[n]` donde `n` es la posición empezando en 0. Modifica el archivo para imprimir los demás elementos:
-
-```ruby
-array = [1, "Pedro", true, false, "Juan"]
-puts array[0]
-puts array[1]
-puts array[2]
-puts array[3]
-puts array[4]
-```
-
-Al ejecutarlo nuevamente deberían aparecer cada uno de los elementos:
-
-```shell
-$ ruby arrays.rb
-1
-Pedro
-true
-false
-Juan
+> array[1]
+ => "Pedro"
+> array[2]
+ => true
+> array[3]
+ => false
+> array[4]
+ => "Juan"
 ```
 
 ## Recorriendo un arreglo
