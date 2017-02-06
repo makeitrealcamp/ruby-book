@@ -2,7 +2,7 @@
 
 Hasta ahora hemos visto código que se ejecuta línea a línea, una detrás de otra. Pero a veces se hace necesario romper esa secuencia y crear ramas que nos permitan tomar diferentes caminos en el código dependiendo de ciertas condiciones.
 
-Por ejemplo, imagina cómo podríamos hacer un programa que nos diga si un número es mayor o menor a diez. Si es mayor a 10 debería imprimir una cosa, pero si es menor debería imprimir otra.
+Por ejemplo, imagina cómo podríamos hacer un programa que nos diga si un número es mayor o menor a diez. Si es mayor a diez debería imprimir una cosa, pero si es menor debería imprimir otra.
 
 A este concepto se le conoce como condicionales y su sintaxis es la siguiente:
 
@@ -12,7 +12,7 @@ if <condición>
 end
 ```
 
-Empieza creando un archivo llamado `conditionals.rb` con el siguiente contenido:
+Para probar los condicionales empieza creando un archivo llamado `conditionals.rb` con el siguiente contenido:
 
 ```ruby
 if true
@@ -27,7 +27,7 @@ $ ruby conditionals.rb
 Hola mundo
 ```
 
-Ahora probemos con falso.
+Ahora probemos con una condición que siempre va a ser falsa.
 
 ```ruby
 if false
@@ -37,7 +37,7 @@ end
 
 Ejecútalo. Esta vez **nunca** debería imprimir `"Hola mundo"`, no importa cuantas veces lo ejecutes.
 
-También podemos utilizar algo que evalúe a verdadero o falso en la condición. Por ejemplo:
+También podemos utilizar una expresión booleana en la condición. Por ejemplo:
 
 ```ruby
 if 1 == 1
@@ -52,7 +52,7 @@ $ ruby conditionals.rb
 Hola mundo
 ```
 
-Prueba ahora con `1 == 2`, `1 < 6` y `8 < 6` en la condición y fíjate que tenga sentido.
+Prueba ahora con las expresiones `1 == 2`, `1 < 6` y `8 < 6` en la condición y fíjate que tenga sentido.
 
 Ahora que ya sabes cómo funciona los condicionales (muchos los llamamos los ifs) crea un programa en un archivo llamado `number.rb` que le pida al usuario que ingrese un número e imprima "El número es menor a 10" solo si el número que ingresó el usuario es menor a 10:
 
@@ -119,7 +119,7 @@ end
 
 Más corto y si lo ejecutas debería funcionar igual.
 
-## Condiciones anidadas
+## Anidando condicionales
 
 Ahora imagina que queremos modificar este programa para que imprima:
 
@@ -192,6 +192,7 @@ Una opción es usar condiciones anidadas, de esta forma:
 
 ```ruby
 num = 15
+
 if num >= 10
   if num <= 20
     puts "El número está entre 10 y 20"
@@ -203,6 +204,7 @@ Sin embargo, cómo decíamos antes, leer condiciones anidadas es difícil y, en 
 
 ```ruby
 num = 15
+
 if num >= 10 && num <= 20
   puts "El número está entre 10 y 20"
 end
@@ -214,6 +216,7 @@ También existe el **o**, que se representa con `||`. Imagina ahora que necesita
 
 ```ruby
 color = gets.chomp
+
 if color == "negro" || color == "blanco"
   puts "Excelente elección"
 end

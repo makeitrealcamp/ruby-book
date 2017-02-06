@@ -129,7 +129,7 @@ generation(year_of_birth)
 
 Si la ejecutas debería funcionar:
 
-```shell
+```
 $ ruby generation_method.rb
 ¿Cuál es tu año de nacimiento? 1982
 Eres un millenial

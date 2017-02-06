@@ -4,7 +4,7 @@ El último tipo de datos que vamos a ver son los hashes (no encontré una buena 
 
 Abramos IRB y creemos nuestro primer hash:
 
-```shell
+```
 $ irb
 2.3.1 :001 > humanoide1 = {"nombre" => "Germán", "apellido" => "Escobar", "edad" => 34, "estatura" => 1.8}
  => {"nombre"=>"Germán", "apellido"=>"Escobar", "edad"=>34, "estatura"=>1.8}
@@ -14,21 +14,21 @@ En este ejemplo utilizamos un hash para almacenar la información de un humano, 
 
 Para obtener el valor de una llave utilizamos una notación muy similar a como lo hacíamos con los arreglos:
 
-```shell
+```
 2.3.1 :002 > humanoide1["nombre"]
  => "Germán"
 ```
 
 Sin embargo, en vez de utilizar la posición como en los arreglos, utilizamos la llave. Las llaves pueden ser de cualquier tipo. En el ejemplo anterior utilizamos strings pero también podrían ser números:
 
-```shell
+```
 2.3.1 :003 > statuses = {0 => "encendido", 1 => "apagado", 2 => "fundido"}
  => {0 => "encendido", 1 => "apagado", 2 => "fundido"}
 ```
 
 Y para obtener el valor de alguna llave:
 
-```shell
+```
 2.3.1 :004 > statuses[1]
  => "apagado"
 ```
@@ -49,14 +49,14 @@ Los símbolos son muy parecidos a las cadenas de texto pero con las siguientes d
 
 Creemos nuestro primer hash con símbolos:
 
-```shell
+```
 $ irb
 2.3.1 :001 > humaniode1 = {:nombre => "Germán", :apellido => "Escobar", :edad => 34, :estatura => 1.8}
 ```
 
 Muy parecido al ejemplo anterior. Pero entonces ¿cuál es la ventaja de usar símbolos como llaves de un hash? La respuesta es que cuando usamos símbolos podemos escribir los hashes de forma más corta:
 
-```shell
+```
 2.3.1 :002 > humaniode1 = {nombre: "Germán", apellido: "Escobar", edad: 34, estatura: 1.8}
 ```
 
@@ -67,7 +67,7 @@ Los cambios que hicimos son los siguientes:
 
 Para obtener algún valor del hash utilizamos el símbolo:
 
-```shell
+```
 2.3.1 :003 > humaniode1[:nombre]
  => "Germán"
 ```

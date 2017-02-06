@@ -61,7 +61,7 @@ end
 
 El resultado cuando lo ejecutamos debe ser el siguiente:
 
-```shell
+```
 $ ruby arrays.rb
 0: 1
 1: Pedro
@@ -129,7 +129,7 @@ Las primeras dos líneas obtienen el número de personas que el usuario quiere i
 
 Ejecutemos el archivo y probémoslo:
 
-```shell
+```
 $ ruby choose.rb
 Ingresa el número de personas que participarán: 3
 Ingresa el nombre de la persona: Pedro
@@ -173,7 +173,7 @@ Hasta ahora hemos solicitado información del usuario utilizando `gets.chomp`. S
 
 Cuando ejecutamos un programa podemos pasarle varios argumentos separados por espacio. por ejemplo:
 
-```shell
+```
 $ ruby program.rb argumento1 argumento2 argumento3
 ```
 
@@ -187,7 +187,7 @@ end
 
 Si ejecutas el archivo deberías ver algo como lo siguiente:
 
-```shell
+```
 $ ruby args.rb argumento1 argumento2 argumento3
 argumento1
 argumento2

@@ -56,11 +56,11 @@ Si ejecutas el código te debería dar el mismo resultado. La ventaja es que si 
 
 ## ¿Dónde y cuánto vive una variable?
 
-Las variables se almacenan en en una memoria especial del computador llamada **memoria RAM** y viven durante la ejecución del programa, desde el momento en que la defines hasta que tu programa termina de ejecutarse. Si abres IRB y defines una variable, esta vive hasta que cierres esa sesión de IRB.
+Las variables se almacenan en en una memoria especial del computador llamada **memoria RAM** y viven durante la ejecución del programa, es decir, desde el momento en que la defines hasta que tu programa termina de ejecutarse. Si abres IRB y defines una variable, esta vive hasta que cierres esa sesión de IRB.
 
 La **memoria RAM** es una memoría de rápido acceso que está disponible mientras tu computador está encendido. El sistema operativo se encarga de administrar la memoria RAM y asignarle una porción a cada programa que se está ejecutando. Cuando el programa termina, el sistema operativo reclama esa memoria y "destruye" todas las variables que ese programa haya creado.
 
-**Nota:** Más adelante, cuando veamos condicionales, ciclos y métodos, veremos que las variables tienen un **alcance** y no todas las variables sobreviven hasta que termina el programa.
+**Nota:** Más adelante, cuando hablemos sobre métodos, aprenderemos que las variables tienen un **alcance** y no todas las variables sobreviven hasta que termina el programa.
 
 ## Entrada del usuario
 
@@ -74,7 +74,7 @@ puts "Hola #{name}"
 
 Al ejecutarlo, el programa te debería pedir que ingreses tu nombre y te debería saludar:
 
-```shell
+```
 $ ruby input.rb
 Ingresa tu nombre: Germán
 Hola Germán
@@ -94,7 +94,7 @@ puts "El área de un cuadrado de lado #{side} es #{side * side}"
 
 Si ejecutas este código te debería aparecer lo siguiente:
 
-```shell
+```
 $ ruby square.rb
 Ingresa la longitud del lado del cuadrado: 5
 El perímetro de un cuadrado de lado 5 es 5555

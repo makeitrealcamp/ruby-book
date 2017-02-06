@@ -11,7 +11,7 @@ puts str.length
 
 Si ejecutas ese programa deberías ver que la longitud de la cadena es 10:
 
-```shell
+```
 $ ruby strings.rb
 10
 ```
@@ -33,7 +33,7 @@ puts str[3]
 
 Si ejecutas ese programa deberías ver algo similar a esto:
 
-```shell
+```
 $ ruby strings.rb
 H
 o
