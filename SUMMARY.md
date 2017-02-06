@@ -7,4 +7,4 @@
 * [Arreglos](5-arreglos.md)
 * [Más cadenas de texto](6-cadenas.md)
 * [Hashes](7-hashes.md)
-* [Métodos](8-funciones.md)
+* [Métodos](8-metodos.md)
