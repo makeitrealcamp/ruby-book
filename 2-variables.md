@@ -11,7 +11,7 @@ puts "Hola #{name}"
 
 Ejecúta el archivo y verifica que el resultado sea el correcto:
 
-```shell
+```
 $ ruby variables.rb
 Hola Germán
 ```
@@ -43,7 +43,7 @@ El perímetro de un cuadrado de lado 5 es 20
 El área de un cuadrado de lado 5 es 25
 ```
 
-El problema con este código es que si quisiéramos ahora calcular otros tamaños, nos tocaría modificar ese valor en varias partes del código. Mejoremos ese código para que utilice una variable:
+El problema con este código es que si quisiéramos calcular el perímetro y el área de un cuadrado de lado 10, o 20, tendríamos que modificar ese valor en varias partes del código. Podemos mejorarlo utilizando una variable:
 
 ```ruby
 side = 5
@@ -53,6 +53,14 @@ puts "El área de un cuadrado de lado #{side} es #{side * side}"
 ```
 
 Si ejecutas el código te debería dar el mismo resultado. La ventaja es que si quieres calcular el perímetro y el área de un cuadrado con otro tamaño solo debes cambiar el valor de la variable. Intenta con 18 (te debería dar 72 de perímetro y 324 de área) y después con 39.
+
+## ¿Dónde y cuánto vive una variable?
+
+Las variables se almacenan en en una memoria especial del computador llamada **memoria RAM** y viven durante la ejecución del programa, desde el momento en que la defines hasta que tu programa termina de ejecutarse. Si abres IRB y defines una variable, esta vive hasta que cierres esa sesión de IRB.
+
+La **memoria RAM** es una memoría de rápido acceso que está disponible mientras tu computador está encendido. El sistema operativo se encarga de administrar la memoria RAM y asignarle una porción a cada programa que se está ejecutando. Cuando el programa termina, el sistema operativo reclama esa memoria y "destruye" todas las variables que ese programa haya creado.
+
+**Nota:** Más adelante, cuando veamos condicionales, ciclos y métodos, veremos que las variables tienen un **alcance** y no todas las variables sobreviven hasta que termina el programa.
 
 ## Entrada del usuario
 
@@ -106,7 +114,7 @@ puts "El área de un cuadrado de lado #{side} es #{side * side}"
 
 ¿Notas el cambio? En la segunda línea le agregamos `.to_i` al final para convertir lo que ingrese el usuario a un número (integer). Ahora, si probamos nuevamente debería funcionar:
 
-```shell
+```
 $ ruby square.rb
 Ingresa la longitud del lado del cuadrado: 5
 El perímetro de un cuadrado de lado 5 es 20
@@ -135,3 +143,5 @@ El área de un cuadrado de lado 5 es 25
 5. ¿Cómo podemos pedirle información al usuario desde un programa de Ruby?
 
 6. ¿Cómo podemos pedirle información al usuario desde un programa de Ruby y convertirlo en número?
+
+7. ¿Dónde y cuánto vive una variable?

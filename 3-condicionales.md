@@ -148,7 +148,7 @@ Prúebalo con un número menor a 10, otro mayor a 10 y con 10. Te debería mostr
 
 ## De lo contrario, si (else if)
 
-En general, es preferible no tener que anidar condicionales porque son difíciles de leer y entender. Otro atajo que nos ofrece Ruby para los condicionales es el `elsif`, que significa "De lo contrario, si ..." en Inglés. La sintaxis es la siguiente:
+En general, es preferible no tener que anidar condicionales porque son difíciles de leer y entender. Otro atajo que nos ofrece Ruby para los condicionales es el `elsif`, que significa "de lo contrario, si" en Inglés. La sintaxis es la siguiente:
 
 
 ```ruby

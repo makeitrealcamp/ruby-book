@@ -74,7 +74,7 @@ $ ruby numbers.rb
 
 Fíjate en la segunda línea del ejemplo. Ruby sigue el mismo estandar que en matemáticas, y por lo tanto la multiplicación se ejecuta primero que la suma. Puedes cambiar el comportamiento con paréntesis. Por ejemplo, cambia la operación de la segunda línea por `3 * (4 + 5)`. El resultado ahora debería ser `27`.
 
-A diferencia de las cadenas de texto, los números no se encierran entre comillas de ninún tipo (de lo contrario Ruby los trata como texto y no como números). Por ejemplo, abre la consola de NodeJS y escribe `"1" + "2"`. El resultado ya no es `3`, es la cadena de texto `"12"`:
+A diferencia de las cadenas de texto, los números no se encierran entre comillas de ninún tipo (de lo contrario Ruby los trata como texto y no como números). Por ejemplo, abre IRB y escribe `"1" + "2"`. El resultado ya no es `3`, es la cadena de texto `"12"`:
 
 ```
 $ irb
@@ -247,7 +247,7 @@ Para usar interpolación ten en cuenta lo siguiente:
    => "2 + 3 es #{2 + 3}"
   ```
 
-* La sintaxis de la interpolación es `#{}`. Ruby evalúa lo que esté entre los corchetes y los convierte en cadena de texto.
+* La sintaxis de la interpolación es `#{}`. Ruby evalúa lo que esté entre los corchetes y lo convierte en cadena de texto.
 * Puedes usar `#{}` las veces que quieras dentro de una cadena.
 
 ## Evalúate
