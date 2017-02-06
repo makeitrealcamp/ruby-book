@@ -152,7 +152,7 @@ Ya hemos visto métodos como `push` para insertar, `each` para recorrer y `sampl
 
 Puedes ver todos los métodos en la [documentación de Array](https://ruby-doc.org/core-2.3.1/Array.html).
 
-# Métodos con exclamación al final
+## Métodos con exclamación al final
 
 En la documentación de Ruby vas a encontrar algunos métodos que terminan con un signo de exclamación al final como `shuffle!` y `reverse!`. Esos métodos se deben utilizar con cuidado porque modifican el arreglo original. Generalmente estos métodos tienen una versión sin signo de exclamación al final que retornan un nuevo arreglo sin modificar el original (p.e. `shuffle` y `reverse`).
 

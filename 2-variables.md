@@ -127,7 +127,7 @@ El área de un cuadrado de lado 5 es 25
 
    ```rb
    name = "Germán"
-	 puts "Hola name"
+   puts "Hola name"
 	 ```
 
 2. ¿Cuál es la utilidad de las variables?
