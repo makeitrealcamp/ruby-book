@@ -22,7 +22,7 @@ $ irb
  => 1
 ```
 
-La sintaxis para obtener un elemento del arreglo es `[n]` donde `n` es la posición empezando en 0. Imprime ls demás elementos del arreglo:
+La sintaxis para obtener un elemento del arreglo es `[n]` donde `n` es la posición empezando en 0. Imprime los demás elementos del arreglo:
 
 ```
 > array[1]
@@ -37,7 +37,7 @@ La sintaxis para obtener un elemento del arreglo es `[n]` donde `n` es la posici
 
 ## Recorriendo un arreglo
 
-En el ejemplo anterior pudimos imprimir cada una de las posiciones porque era un arreglo de pocos elementos. Sin embargo esto no siempre es práctico. Primero, el arreglo puede ser muy grande o puede que no sepamos el tamaño del arreglo. Modifiquemos el programa anterior para recorrer el arreglo e imprimir todas sus posiciones:
+En el ejemplo anterior pudimos imprimir cada una de las posiciones porque era un arreglo de pocos elementos. Sin embargo esto no siempre es práctico. Primero, el arreglo puede ser muy grande o puede que no sepamos el tamaño del arreglo de antemano. Crea un archivo llamado `arrays.rb` y escribe el siguiente código:
 
 ```ruby
 array = [1, "Pedro", true, false, "Juan"]
@@ -47,7 +47,16 @@ array.each do |element|
 end
 ```
 
-El resultado debe ser el mismo que antes, pero esta vez utilizamos un ciclo para recorrer el arreglo en vez de imprimir cada posición. Fíjate que ya no utilizamos la notación `[n]` y la razón es que el método `each` que utilizamos para recorrer el arreglo nos entrega es el **valor** de cada una de las posiciones.
+El resultado debe ser el siguiente:
+
+```
+$ ruby arrays.rb
+1
+Pedro
+true
+false
+Juan
+```
 
 Si necesitamos el índice de cada elemento podemos utilizar el método `each_with_index` en vez de `each`:
 
@@ -108,7 +117,16 @@ array.insert(0, "Juan") # ["Juan", "Pedro", "Germán", "Diana"]
 
 El método `insert` recibe 2 argumentos: la posición en la que se quiere insertar el elemento y el valor del nuevo elemento. Todos los elementos desde esa posición se mueven a la derecha.
 
-## Un ejemplo
+## Eliminando elementos
+
+Para eliminar elementos de un arreglo utiliza `delete_at`:
+
+```ruby
+array = ["Pedro", "Germán", "Diana"]
+array.delete_at(1) # ["Pedro", "Diana"]
+```
+
+## Un Ejemplo
 
 Pongamos en práctica lo que hemos visto hasta ahora y creemos un programa que le permita al usuario ingresar los nombres de algunas personas y seleccione una al azar. Crea un archivo llamado `choose.rb` y escribe lo siguiente:
 
@@ -140,7 +158,7 @@ La persona seleccionada es Pedro
 
 # Métodos útiles
 
-Ya hemos visto métodos como `push` para insertar, `each` para recorrer y `sample` para seleccionar un elemento de forma aleatoria en los arreglos. Otros métodos útiles son:
+Ya hemos visto métodos como `push` para insertar, `each` para recorrer, `delete_at` para eliminar y `sample` para seleccionar un elemento de forma aleatoria en los arreglos. Otros métodos útiles son:
 
 | Método   | Descripción |
 |---|---|
@@ -148,13 +166,12 @@ Ya hemos visto métodos como `push` para insertar, `each` para recorrer y `sampl
 | last     | Retorna el último elemento del arreglo |
 | shuffle  | Retorna un nuevo arrego mezclado aleatoriamente |
 | length   | Retorna el tamaño del arreglo |
-| delete_at | Elimina el elemento en la posición especificada |
 
 Puedes ver todos los métodos en la [documentación de Array](https://ruby-doc.org/core-2.3.1/Array.html).
 
 ## Métodos con exclamación al final
 
-En la documentación de Ruby vas a encontrar algunos métodos que terminan con un signo de exclamación al final como `shuffle!` y `reverse!`. Esos métodos se deben utilizar con cuidado porque modifican el arreglo original. Generalmente estos métodos tienen una versión sin signo de exclamación al final que retornan un nuevo arreglo sin modificar el original (p.e. `shuffle` y `reverse`).
+En la documentación de Ruby vas a encontrar algunos métodos que terminan con un signo de exclamación al final como `shuffle!` y `reverse!`. Esos métodos se deben utilizar con cuidado porque modifican el arreglo original. Generalmente estos métodos tienen otra versión sin signo de exclamación que retornan un nuevo arreglo sin modificar el original (p.e. `shuffle` y `reverse`).
 
 En general intenta utilizar los métodos que **no** tienen el signo de exclamación al final a menos de que sea necesario modificar el arreglo original.
 
@@ -163,8 +180,8 @@ Por ejemplo, si quieres mezclar los lementos de un arreglo puedes hacerlo de dos
 ```ruby
 array = [1, 2, 3, 4, 5]
 
-array.shuffle! # modifica el arreglo original
-another_array = array.suffle # no modifica el arreglo original
+array.shuffle! # modifica el arreglo original, no es necesario asignarlo a otra variable
+another_array = array.suffle # no modifica el arreglo original, es necesario asignarlo a otra variable
 ```
 
 ## Argumentos de un programa
@@ -195,3 +212,15 @@ argumento3
 ```
 
 Es simplemente otra forma en la que puedes recibir información del usuario.
+
+## Evalúate
+
+1. Define un arreglo con los siguientes elementos y almacénalo en una variable llamada `arr`: `"Hola"`, `"Mundo"`, 3, `"veces"`.
+
+2. Escribe un programa que recorra el arreglo que definiste en el punto anterior y muestre la frase: `"El valor en la posición x es y"` donde `x` es la posición (empezando en 0) y `y` el valor del elemento.
+
+3. ¿Cuáles son las dos formas de insertar un elemento en un arreglo?
+
+4. ¿Cómo se puede eliminar un elemento de una posición específica del arreglo?
+
+5. ¿Para qué sirve el método `shuffle` y cuál es la diferencia entre `arr.shuffle` y `arr.shuffle!`?
