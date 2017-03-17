@@ -108,7 +108,7 @@ Nacidos >= 2005 - centenials
 Vamos ahora a hacer un método que nos diga la generación y lo invocamos con lo que ingrese el usuario. Crea un archivo llamado `generation_method.rb` y escribe lo siguiente:
 
 ```ruby
-def generation(birth_of_year)
+def generation(year_of_birth)
   if year_of_birth >= 1996
     puts "Eres un centenial"
   elsif year_of_birth >= 1977
@@ -138,7 +138,7 @@ Eres un millenial
 Sin embargo, sería mucho mejor evitar el `puts` en el método. Modifiquémoslo para mejorarlo:
 
 ```ruby
-def generation(birth_of_year)
+def generation(year_of_birth)
   if year_of_birth >= 1996
     "Eres un centenial"
   elsif year_of_birth >= 1977
@@ -161,7 +161,7 @@ puts generation(year_of_birth)
 Mucho mejor. Sin embargo hay algo que no me gusta de este método. Está retornando los strings en Español. Si quisiéramos comparar ese valor para realizar alguna acción dependiendo de la generación, nos tocaría comparar el string exacto. Además, si queremos tener una aplicación que soporte varios idiomas esta implementación no va a funcionar. Podemos mejorarla:
 
 ```ruby
-def generation(birth_of_year)
+def generation(year_of_birth)
   if year_of_birth >= 1996
     :centenial
   elsif year_of_birth >= 1977

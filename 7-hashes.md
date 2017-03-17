@@ -79,7 +79,7 @@ Es posible mezclar arreglos y hashes para crear estructuras complejas. Para prob
 ```ruby
 products = [
   { id: 1, name: "Leche", price: 120, categories: ["familiar", "comida"] },
-  { id: 2, name: "Arroz", price: 80, ["familiar", "comida"] },
+  { id: 2, name: "Arroz", price: 80, categories: ["familiar", "comida"] },
   { id: 3, name: "Lavadora", price: 7800, categories: ["electrodomésticos"] }
 ]
 ```
@@ -89,14 +89,14 @@ En este ejemplo hemos creado un arreglo de hashes. Cada hash representa un produ
 ```ruby
 products = [
   { id: 1, name: "Leche", price: 120, categories: ["familiar", "comida"] },
-  { id: 2, name: "Arroz", price: 80, ["familiar", "comida"] },
+  { id: 2, name: "Arroz", price: 80, categories: ["familiar", "comida"] },
   { id: 3, name: "Lavadora", price: 7800, categories: ["electrodomésticos"] }
 ]
 
 products.each do |product|
   puts product[:name]
   puts "  Id: #{product[:id]}"
-  puts "  Precio: #{product[:name]}"
+  puts "  Precio: #{product[:price]}"
   puts "  Categorias: #{product[:categories].join(", ")}"
   puts "-" * 20
 end
