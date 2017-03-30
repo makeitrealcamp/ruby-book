@@ -103,3 +103,15 @@ Sobre las cadenas de texto podemos llamar una gran cantidad de métodos y operad
 | `gsub` | Reemplaza las ocurrencias en el texto | `"Hola mundo".gsub("mundo", "Germán") # Hola Germán` |
 
 Prueba cada uno de los ejemplos en IRB. Puedes encontrar todos los métodos de las cadenas en la [documentación de Ruby](http://ruby-doc.org/core-2.3.1/String.html)
+
+## Evalúate
+
+1. ¿Cómo puedo obtener la longitud de la cadena `"Hola Mundo"`?
+
+2. ¿Cómo puedo obtener la tercera posición de la cadena `"Hola Mundo"`? Debería ser la `l`.
+
+3. ¿Cuál es el método que se utiliza para partir cadenas? ¿Qué retorna ese método?
+
+4. ¿Cuál es el método que se utiliza para unir las posiciones de un arreglo? ¿Qué retorna ese método?
+
+5. ¿Cuál es el método que se utiliza para reemplazar parte de la cadena por otra?
