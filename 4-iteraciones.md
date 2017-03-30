@@ -175,4 +175,4 @@ Adivina el número del 1 al 10 que estoy pensando: 5
 Felicitaciones, lo adivinaste!
 ```
 
-Si lo solucionas muy fácilmente modifícalo para limitar el número de intentos a 3.
+Si lo solucionas fácilmente, modifícalo para limitar el número de intentos a 3.
