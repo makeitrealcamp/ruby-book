@@ -148,12 +148,12 @@ Para obtener algún valor del hash utilizamos el símbolo:
 
 Ya hemos visto cómo definir un hash, y cómo insertar, obtener, eliminar y recorrer elementos de un hash. Otros métodos útiles incluyen:
 
-| Método/Operador | Descripción | Ejemplo |
+| Método/Operador | Descripción |
 | --- | --- | --- |
-| `length` | Retorna el número de elementos en el hash | `{ "one" => "uno" }.length # 1` |
-| `has_key?` | Retorna `true` si la llave existe  | `{ "one" => "uno" }.has_key?("one") # true` |
-| `keys` | Retorna un arreglo con las llaves | `{ "one" => "uno" }.keys # ["one"]` |
-| `values` | Retorna un arreglo con los valres | `{ "one" => "uno" }.values # ["uno"]` |
+| `length` | Retorna el número de elementos en el hash |
+| `has_key?` | Retorna `true` si la llave existe  |
+| `keys` | Retorna un arreglo con las llaves |
+| `values` | Retorna un arreglo con los valres |
 
 Prueba cada uno de los ejemplos en IRB. Puedes encontrar todos los métodos de los hashes en la [documentación de Ruby](https://ruby-doc.org/core-2.3.1/Hash.html).
 
@@ -192,14 +192,13 @@ Lo primero que estamos haciendo es iterando por el arreglo de productos. Por cad
 ## Evalúate
 
 1. Define un hash a partir de la siguiente tabla y almacénalo en una variable `car`:
-
-| Llave | Valor |
-| --- | --- |
-| `:brand` | `"Renault"` |
-| `:year` | `2008` |
-| `:price` | `12000` |
-| `:color` | `:negro` |
-| `:sunroof`   | `true` |
+     | Llave | Valor |
+     | --- | --- |
+     | :brand | "Renault" |
+     | :year | 2008 |
+     | :price | 12000 |
+     | :color | :negro |
+     | :sunroof | true |
 
 2. ¿Cómo podríamos obtener el valor de la llave `:color`?
 
