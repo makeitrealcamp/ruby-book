@@ -10,7 +10,9 @@ $ irb
  => {"nombre"=>"Germán", "apellido"=>"Escobar", "edad"=>34, "estatura"=>1.8}
 ```
 
-En este ejemplo utilizamos un hash para almacenar la información de una persona, pero podemos utilizar los hashes para almacenar cualquier tipo de información que requiera esa asociación llave-valor.
+En este ejemplo estamos creando un hash y almacenándolo en la variable `persona`. Un **hash** se define utilizando corchetes (`{}`). Los elementos se separan con coma (`,`) y las llaves se separan de los valores con **hash rocket** (`=>`).
+
+En este hash estamos almacenando la información de una persona, pero en un **hash** podemos almacenar cualquier tipo de información que requiera esa asociación llave-valor.
 
 ## Obteniendo valores de un hash
 
