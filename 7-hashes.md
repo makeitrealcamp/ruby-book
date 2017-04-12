@@ -192,6 +192,7 @@ Lo primero que estamos haciendo es iterando por el arreglo de productos. Por cad
 ## Evalúate
 
 1. Define un hash a partir de la siguiente tabla y almacénalo en una variable `car`:
+
      | Llave | Valor |
      | --- | --- |
      | :brand | "Renault" |
