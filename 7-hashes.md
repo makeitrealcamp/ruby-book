@@ -193,13 +193,13 @@ Lo primero que estamos haciendo es iterando por el arreglo de productos. Por cad
 
 1. Define un hash a partir de la siguiente tabla y almacénalo en una variable `car`:
 
-     | Llave | Valor |
-     | --- | --- |
-     | :brand | "Renault" |
-     | :year | 2008 |
-     | :price | 12000 |
-     | :color | :negro |
-     | :sunroof | true |
+        | Llave | Valor |
+        | --- | --- |
+        | :brand | "Renault" |
+        | :year | 2008 |
+        | :price | 12000 |
+        | :color | :negro |
+        | :sunroof | true |
 
 2. ¿Cómo podríamos obtener el valor de la llave `:color`?
 
