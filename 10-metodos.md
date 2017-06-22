@@ -10,7 +10,7 @@ def hello
 end
 ```
 
-Para definir un método usamos la palabra reservada `def` y le damos un nombre (en este caso hello). Al final debemos cerrar el método con `end`.
+Para definir un método usamos la palabra reservada `def` y le damos un nombre (en este caso `hello`). Al final debemos cerrar el método con `end`.
 
 ```
 $ ruby methods.rb
@@ -186,3 +186,6 @@ puts "Eres de la generación #{translations[generation_code]}"
 ```
 
 El programa es más largo pero la función `generation` es ahora mucho más reutilizable. Si queremos tomar una desición dependiendo de la generación lo podemos hacer fácilmente (comparar símbolos es mucho menos propenso a errores que comparar cadenas de texto).
+
+## Evalúate
+

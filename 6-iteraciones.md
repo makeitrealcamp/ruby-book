@@ -156,7 +156,7 @@ $ ruby range_loop.rb
 12 Hola mundo
 13 Hola mundo
 14 Hola mundo
-14 Hola mundo
+15 Hola mundo
 ```
 
 Existen más formas de iterar en Ruby (Ruby es un lenguaje muy expresivo) pero estas son suficientes para que empieces a practicar.

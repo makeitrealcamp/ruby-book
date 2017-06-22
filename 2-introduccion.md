@@ -150,7 +150,7 @@ Fíjate que en el nuevo comentario estamos escribiendo código Ruby válido, per
 
 ## Evalúate
 
-Al final de cada capítulo encontrarás algunas preguntas sobre los conceptos más importantes. No te preocupes si tienes que repasar el capítulo para encontrar las respuestas. Lo que sí te recomendamos es que escribas las respuestas en alguna parte (no importa si es en papel o digitalmente) para que afiances los conceptos.
+Escribas las respuestas a las siguientes preguntas (en papel o digitalmente) para que afiances los conceptos.
 
 1. ¿Qué es IRB?
 

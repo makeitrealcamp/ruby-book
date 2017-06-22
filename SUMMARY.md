@@ -1,4 +1,5 @@
 * [Inicio](README.md)
+* [El editor de texto](0-editor-de-texto.md)
 * [Primeros pasos](0-introduccion.md)
 * [Tipos y Operadores](1-tipos-y-operadores.md)
 * [Variables y entrada de usuario](2-variables.md)

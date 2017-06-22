@@ -1,6 +1,6 @@
 # Hashes
 
-El último tipo de datos que vamos a ver son los **hashes** (no existe una buena traducción al español). Un hash no es más que una colección de datos en donde cada valor está asociado a una llave. Imagina un diccionario, en donde las palabras son las llaves y las deficiones son los valores.
+El último tipo de datos que vamos a ver son los **hashes** (no existe una buena traducción al español). Un hash no es más que una colección de datos en donde cada valor está asociado a una llave. Imagina un diccionario, en donde las palabras son las llaves y las definiciones son los valores.
 
 Abramos IRB y creemos nuestro primer hash:
 
@@ -155,7 +155,7 @@ Ya hemos visto cómo definir un hash, y cómo insertar, obtener, eliminar y reco
 | `length` | Retorna el número de elementos en el hash |
 | `has_key?` | Retorna `true` si la llave existe  |
 | `keys` | Retorna un arreglo con las llaves |
-| `values` | Retorna un arreglo con los valres |
+| `values` | Retorna un arreglo con los valores |
 
 Prueba cada uno de los ejemplos en IRB. Puedes encontrar todos los métodos de los hashes en la [documentación de Ruby](https://ruby-doc.org/core-2.3.1/Hash.html).
 
