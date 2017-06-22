@@ -2,13 +2,9 @@
 
 En este capítulo vas a aprender a ejecutar código Ruby. Nuestra recomendación es que transcribas y ejecutes cada uno de los ejemplos de este libro en tu computador e intentes solucionar cada uno de los ejercicios de forma que aceleres tu aprendizaje. Recuerda que la mejor forma de aprender sobre programación es escribiendo código.
 
-## Requisitos
+## Instalación de Ruby
 
-Para sacar el mayor provecho de este libro necesitas saber qué es la línea de comandos, también conocida como consola, terminal o símbolo del sitema. Debes saber al menos cómo abrirla y qué comandos utilizar para listar archivos y navegar por las carpetas del sistema. Si aún no estás familiarizado con la línea de comandos te recomendamos [este post en el blog de Make it Real](http://blog.makeitreal.camp/la-linea-de-comandos/) que te brinda una introducción y te indica algunos recursos que puedes consultar con más información.
-
-Para seguir los ejemplos de este libro vas a necesitar tener instalado [Ruby](https://ruby-lang.org/) y un editor de texto como [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/) o el de tu preferencia. Si no tienes un editor de preferencia nuestra recomendación es que instales y utilices [Atom](https://atom.io/).
-
-Aunque lo más probable es que aún no tengas [Ruby](https://ruby-lang.org/) instalado en tu maquina, verifica igual abriendo una línea de comandos y ejecutando `ruby -v`. Si ya lo tienes te va a aparecer una línea similar a la siguiente:
+Antes de instalar Ruby verifica si lo tienes instalado abriendo una línea de comandos y ejecutando `ruby -v`. Si ya lo tienes te va a aparecer una línea similar a la siguiente:
 
 ```
 $ ruby -v

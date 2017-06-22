@@ -55,8 +55,6 @@ Cuando abres una carpeta aparecerá a la izquierda un panel que muestra los arch
 
 ## Evalúate
 
-Al final de cada capítulo encontrarás algunas preguntas y ejercicios para que te auto-evalúes. No te preocupes si tienes que repasar el capítulo para encontrar las respuestas o buscar en Internet, de eso se trata.
-
 1. Crea una nueva carpeta llamada `mi-proyecto` en el Escritorio y ábrela con [Atom](https://atom.io/).
 
 2. Desde [Atom](https://atom.io/) crea un nuevo archivo llamado `archivo1.txt` dentro de la carpeta `mi-proyecto`.
