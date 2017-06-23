@@ -2,7 +2,7 @@
 * [El editor de texto](0-editor-de-texto.md)
 * [La línea de comandos](1-linea-de-comandos.md)
 * [Primeros pasos](2-introduccion.md)
-* [Tipos y Operadores](3-tipos-y-operadores.md)
+* [Tipos y operadores](3-tipos-y-operadores.md)
 * [Variables y entrada de usuario](4-variables.md)
 * [Condicionales](5-condicionales.md)
 * [Ciclos](6-iteraciones.md)
@@ -10,3 +10,4 @@
 * [Más cadenas de texto](8-cadenas.md)
 * [Hashes](9-hashes.md)
 * [Métodos](10-metodos.md)
+* [Manipulación de archivos](11-archivos.md)
