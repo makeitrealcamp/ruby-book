@@ -4,7 +4,7 @@ En este capítulo vas a aprender a ejecutar código Ruby. Nuestra recomendación
 
 ## Instalación de Ruby
 
-Antes de instalar Ruby verifica si lo tienes instalado abriendo una línea de comandos y ejecutando `ruby -v`. Si ya lo tienes te va a aparecer una línea similar a la siguiente:
+Antes de instalar Ruby verifica si ya lo tienes instalado abriendo una línea de comandos y ejecutando `ruby -v`. Si ya lo tienes te va a aparecer una línea similar a la siguiente:
 
 ```
 $ ruby -v
