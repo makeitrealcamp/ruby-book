@@ -95,7 +95,7 @@ En general, los programadores de Ruby tienden a omitir el `return` a menos de qu
 
 ## Un ejemplo
 
-En el capítulo de [Condicionales](3-condicionales.md) hicimos un programa que nos decía de qué generación somos dependiendo de nuestro año de nacimiento. Las generaciones son las siguientes:
+Hagamos un programa que nos diga de qué generación somos dependiendo de nuestro año de nacimiento. Las generaciones son las siguientes:
 
 ```
 Nacidos <= 1945 - la gran generación
@@ -127,7 +127,7 @@ year_of_birth = gets.chomp.to_i
 generation(year_of_birth)
 ```
 
-Si la ejecutas debería funcionar:
+Si la ejecutas debería decirte la generación dependiendo de tu año de nacimiento:
 
 ```
 $ ruby generation_method.rb
@@ -189,3 +189,32 @@ El programa es más largo pero la función `generation` es ahora mucho más reut
 
 ## Evalúate
 
+1. Escribe un método llamado `square_perimeter` que reciba un argumento `side` y calcule el perímetro de un cuadrado (recuerda que el perímetro de un cuadrado es la suma de los lados). Por ejemplo:
+
+    ```ruby
+    square_perimeter(2) # Debería retornar 8
+    square_perimeter(5) # Debería retornar 20
+    ```
+
+2. Escribe un método llamado `square_area` que reciba un argumento `side` y retorne el área de de un cuadrado. Por ejemplo:
+
+    ```ruby
+    square_area(2) # Debería retornar 4
+    square_area(5) # Debería retornar 25
+    ```
+
+3. Escribe un método llamado `sum` que reciba un arreglo y retorne la suma de los elementos. Por ejemplo:
+
+    ```ruby
+    sum([]) # debería retornar 0
+    sum([1]) # debería retornar 1
+    sum([1, 2, 3]) # debería retornar 6
+    ```
+
+4. Escribe un método llamado `average` que reciba un arreglo y retorne el promedio de los elementos. Por ejemplo:
+
+    ```ruby
+    average([]) # debería retornar 0
+    average([1]) # debería retornar 1
+    average([1, 2, 3]) # debería retornar 2
+    ```
